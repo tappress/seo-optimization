@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
     <link rel="stylesheet" href="styles/custom.css">
-    <style>
-        .shower {
-            --slide-ratio: calc(4 / 3);
-        }
-    </style>
 </head>
 <body class="shower list">
 
 <header class="caption">
     <h1>Лекція 1. Вступ до SEO та пошукових систем</h1>
+    <p>
+        <a href="index.html">Назад до змісту</a>
+    </p>
 </header>
 
 <section class="slide">
@@ -25,17 +23,933 @@
 </section>
 
 <section class="slide">
-    <h3>План лекції:</h3>
+    <h2>План лекції:</h2>
+    <ol>
+        <li>Поняття SEO та його роль у цифровому маркетингу.</li>
+        <li>Як працюють пошукові системи: crawling, indexing, ranking.</li>
+        <li>White/Grey/Black SEO.</li>
+        <li>Домени, хостинг, DNS та їх вплив на SEO.</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>SEO як інженерна задача</h2>
+    <b>Фактично, ми працюємо на стику:</b>
     <ul>
-        <li>Поняття SEO та його роль у цифровому маркетингу</li>
-        <li>Як працюють пошукові системи: crawl, index, rank</li>
-        <li>White / Grey / Black SEO</li>
-        <li>Домени, хостинг, DNS та їх вплив на SEO</li>
+        <li> Web Engineering</li>
+        <li> Information Retrieval</li>
+        <li>Distributed Systems</li>
+        <li>Performance Optimization</li>
+    </ul>
+    <p>Як frontend або fullstack інженери ви напряму впливаєте на SEO через архітектуру, рендеринг і продуктивність.</p>
+</section>
+
+<section class="slide">
+    <h2>Що таке SEO?</h2>
+    <p><b>SEO (Search Engine Optimization)</b> - оптимізація вебресурсу для підвищення його позицій у результатах
+        пошукових систем за релевантними запитами.</p>
+    <p><b>SEO (Search Engine Optimization)</b> - це комплекс технічних, контентних та маркетингових дій, спрямованих на:
+    </p>
+    <ul>
+        <li>Покращення позицій сайту в пошуковій видачі</li>
+        <li>Збільшення органічного (безкоштовного) трафіку</li>
+        <li>Підвищення якості цього трафіку</li>
+    </ul>
+    <b>Ключове, про що треба пам'ятати - SEO ≠ реклама, SEO - це довгострокова інвестиція.</b>
+</section>
+
+<section class="slide">
+    <h2>Що таке SEO?</h2>
+    <b>Мета SEO:</b>
+    <ul>
+        <li>Збільшення органічного трафіку</li>
+        <li>Покращення видимості бренду</li>
+        <li>Залучення цільової аудиторії</li>
+        <li>Підвищення конверсії</li>
+    </ul>
+    <b>Що каже статистика:</b>
+    <ul>
+        <li>93% онлайн-взаємодій починаються з пошукових систем</li>
+        <li>75% користувачів не переходять на другу сторінку результатів</li>
+        <li>Органічний пошук генерує 53% всього трафіку сайту</li>
     </ul>
 </section>
 
+<section class="slide">
+    <h2>Роль SEO у цифровому маркетингу</h2>
+    <div class="columns two">
+        <div><b>Переваги SEO:</b>
+            <ul>
+                <li>Довгостроковий ефект - результати зберігаються навіть після припинення активної оптимізації</li>
+                <li>Висока довіра - користувачі більше довіряють органічним результатам, ніж рекламі</li>
+                <li>Економічна ефективність - не потрібно платити за кожен клік</li>
+                <li>Конкурентна перевага - топові позиції = більше клієнтів</li>
+            </ul>
+        </div>
+        <div>
+            <b>SEO є частиною digital marketing ecosystem:</b>
+            <ul>
+                <li>SEO (органічний пошук)</li>
+                <li>PPC (Pay-Per-Click - контекстна реклама)</li>
+                <li>SMM (Social Media Marketing)</li>
+                <li>Email-маркетинг</li>
+                <li>Content marketing (статті, відео, соцмережі)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Роль SEO у цифровому маркетингу</h2>
+    <table style="text-align: center; font-weight: bold;">
+        <tr>
+            <td>SEO</td>
+            <td>← →</td>
+            <td>Контент-маркетинг</td>
+        </tr>
+        <tr>
+            <td>↓</td>
+            <td></td>
+            <td>↓</td>
+        </tr>
+        <tr>
+            <td>SMM</td>
+            <td>← →</td>
+            <td>Email-маркетинг</td>
+        </tr>
+        <tr>
+            <td>↓</td>
+            <td></td>
+            <td>↓</td>
+        </tr>
+        <tr>
+            <td>PPC</td>
+            <td>→ Analytics ←</td>
+            <td>CRO</td>
+        </tr>
+    </table>
+    <b>60–70% кліків припадає на органічні результати, а не рекламу!</b>
+</section>
+
+<section class="slide">
+    <h2>Роль SEO у цифровому маркетингу</h2>
+    <b>SEO ← → Контент-маркетинг (Верхній рівень)</b>
+    <ul>
+        <li>SEO знаходить теми → Контент створює статті</li>
+        <li>Контент залучає трафік → SEO ранжує в Google</li>
+        <li>Приклад: SEO показує запит "як вибрати ноутбук" (10K/міс) → Контент пише гід → TOP-3 в Google</li>
+    </ul>
+    <b>SEO → SMM (Ліва вертикаль)</b>
+    <ul>
+        <li>Статті стають постами в соцмережах</li>
+        <li>Соціальні сигнали покращують SEO</li>
+        <li>Приклад: стаття з блогу → Пост в Instagram → 3000 переходів назад на сайт</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Роль SEO у цифровому маркетингу</h2>
+    <b>Контент → Email (Права вертикаль)</b>
+    <ul>
+        <li>Lead-магніти (PDF-Guide) збирають emails</li>
+        <li>Email розсилає корисний контент</li>
+        <li>Приклад для онлайн-курсів програмування: "Roadmap Frontend-розробника: від нуля до junior за 6 місяців" →
+            5000 підписників → Email-серія →
+            15% купують
+        </li>
+    </ul>
+    <b>SMM ← → Email-маркетинг (Середній рівень)</b>
+    <ul>
+        <li>Конкурси в соцмережах → збір emails</li>
+        <li>Email просить підписатись на Instagram</li>
+        <li>Приклад: конкурс в Instagram → +5000 emails → Welcome letter → Cross-promotion</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Роль SEO у цифровому маркетингу</h2>
+    <b>SMM → PPC (Ліва вертикаль)</b>
+    <ul>
+        <li>Органічні пости тестують креативи</li>
+        <li>Платна реклама масштабує успішний контент</li>
+        <li>Приклад: пост має 8% engagement (залучення) → Бустимо за $100 → 50K переглядів</li>
+    </ul>
+    <b>Email → Analytics (Права вертикаль)</b>
+    <ul>
+        <li>UTM (Urchin Tracking Module + Google Analytics)-параметри трекають ефективність</li>
+        <li>Аналіз конверсій кожної розсилки</li>
+        <li>Приклад: email-кампанія → Analytics: 25% open rate, 3.5% conversion, $12K revenue</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Роль SEO у цифровому маркетингу</h2>
+    <b>PPC ↔ Analytics ↔ CRO (Нижній рівень)</b>
+    <ul>
+        <li>PPC генерує дані → Analytics аналізує → CRO покращує → Конверсія росте → PPC ефективніше</li>
+        <li>Приклад: analytics: bounce 65% → CRO: змінюємо кнопку → Bounce 45%, конверсія +18%</li>
+    </ul>
+    <b>
+        Головна ідея - всі канали працюють разом, а не окремо.
+        <br>
+        Analytics - це мозок системи, який координує всі дії!
+    </b>
+</section>
+
+<section class="slide">
+    <h2>Чому SEO важливе для бізнесу</h2>
+    <ul>
+        <li>Довіра користувачів до Google > довіра до реклами</li>
+        <li>Стабільний трафік 24/7</li>
+        <li>Нижча вартість залучення користувача (CAC - Customer Acquisition Cost)</li>
+        <li>SEO напряму впливає на UI/UX, швидкість, архітектуру сайту</li>
+    </ul>
+    <b>SEO для frontend-інженера = якісний код + правильний рендеринг</b>
+</section>
+
+<section class="slide">
+    <h2>Еволюція SEO</h2>
+    <ul>
+        <li>2000-2005: Keyword stuffing, масова закупка посилань</li>
+        <li>2005-2010: Google PageRank, якість контенту</li>
+        <li>2011-2015: Panda, Penguin оновлення - боротьба зі спамом</li>
+        <li>2015-2020: Мобільна оптимізація, RankBrain (AI)</li>
+        <li>2020-2025: Core Web Vitals, E-E-A-T, User Experience</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Типи пошукових систем</h2>
+    <ul>
+        <li>Google (≈ 90% ринку)</li>
+        <li>Bing</li>
+        <li>DuckDuckGo</li>
+        <li>Baidu (Китай)</li>
+    </ul>
+    <b>Пошукова система працює у 3 етапи:</b>
+    <ul>
+        <li>Crawling (Сканування) - виявлення сторінок</li>
+        <li>Indexing (Індексація) - аналіз та збереження контенту</li>
+        <li>Ranking (Ранжування) - визначення позицій у видачі</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Crawling (Сканування)</h2>
+    <p>Процес автоматичного виявлення та відвідування вебсторінок ботами (краулерами).
+        Основні краулери: Googlebot (Google), Bingbot (Bing).</p>
+    <b>Як це працює:</b>
+    <ol>
+        <li>Краулер починає з seed URLs</li>
+        <li>Переходить по посиланнях на сторінці</li>
+        <li>Завантажує HTML, CSS, JavaScript, images (обмежено)</li>
+        <li>Додає нові URL до черги сканування</li>
+        <li>Повторює процес</li>
+    </ol>
+    <p><b>Crawl Budget</b> - скільки сторінок Google готовий сканувати за одиницю часу.</p>
+</section>
+
+<section class="slide">
+    <h2>Crawling (Сканування)</h2>
+    <p>Як розробник, ви можете контролювати краулінг через файл robots.txt.</p>
+    <b>Файл robots.txt:</b>
+    <p>
+        User-agent: *
+        <br>
+        Disallow: /admin/
+        <br>
+        Disallow: /private/
+        <br>
+        Allow: /public/
+        <br>
+        Sitemap: https://example.com/sitemap.xml
+    </p>
+    <p>Ми кажемо ботам: "Не сканувати папку admin і private, але можна сканувати public".</p>
+    <p>Також вказуємо шлях до sitemap - це XML-файл зі списком всіх важливих сторінок сайту.</p>
+</section>
+
+<section class="slide">
+    <h2>Crawling: обмежені ресурси</h2>
+    <p>Пошукова система не має нескінченних ресурсів.</p>
+    <p>Google не буде сканувати ваш сайт повністю, якщо:</p>
+    <ul>
+        <li>сервер повільний</li>
+        <li>багато 500-помилок</li>
+        <li>багато дублюючих URL</li>
+    </ul>
+    <p>Саме тому й існує поняття crawl budget - обмежений обсяг сторінок, які бот готовий просканувати за одиницю
+        часу.</p>
+</section>
+
+<section class="slide">
+    <h2>Crawl budget</h2>
+    <p>Crawl budget особливо критичний для великих систем - маркетплейсів, SaaS, каталогів.</p>
+    <b>Він залежить від:</b>
+    <ul>
+        <li>авторитету домену</li>
+        <li>швидкості відповіді</li>
+        <li>кількості помилок</li>
+    </ul>
+    <p style="font-size: 16px;line-height: 24px;">
+        <b>Наприклад</b>, якщо у вас: 1 мільйон URL,
+        є фільтри (за категорією, ціною, кольором, брендом, стилем тощо) генерують нескінченні варіації - ви створюєте
+        infinite URL space. Кількість можливих комбінацій фільтрів може зростати експоненціально. Це може призвести до
+        тисяч URL-адрес, кожна з яких знайде певну підмножину проданих товарів. Це може бути зручно для ваших
+        користувачів, але не дуже корисно для робота Googlebot, який хоче знайти все – один раз!
+        У результаті важливі сторінки можуть не індексуватися.
+    </p>
+</section>
+
+<section class="slide">
+    <h2>JS та crawling</h2>
+    <p>Це важливий момент для frontend-розробників.</p>
+    <p>Google спочатку читає HTML.</p>
+    <p>JavaScript виконується пізніше і з обмеженнями.</p>
+    <b>Якщо ваш сайт:</b>
+    <ul>
+        <li>повністю <a href="https://developer.mozilla.org/en-US/docs/Glossary/CSR" target="_blank">Client-side
+            rendering (CSR)</a></li>
+        <li>дані підтягуються тільки після <a href="https://en.wikipedia.org/wiki/Hydration_(web_development)"
+                                              target="_blank">hydration</a> - бот може не побачити контент.
+        </li>
+        <li>Тому <a href="https://developer.mozilla.org/en-US/docs/Glossary/SSR" target="_blank">SSR</a>, <a
+            href="https://developer.mozilla.org/en-US/docs/Glossary/SSG" target="_blank">SSG</a
+        > або hybrid
+            rendering - практично стандарт для production.
+        </li>
+    </ul>
+    <a href="https://www.freecodecamp.org/news/what-are-pre-rendering-and-hydration-in-web-dev/" target="_blank">What
+        are Pre-Rendering and Hydration in Web Development? A Deep Dive for Devs (October 7, 2024)</a>
+</section>
+
+<section class="slide">
+    <h2>Інструменти для Server-Side Rendering (SSR)</h2>
+    <p>JavaScript/TypeScript екосистема</p>
+    <div class="columns two" style="font-size: 16px; line-height: 24px;">
+        <div class="column">
+            <ul>
+                <li><b>Next.js (React)</b>
+                    <ul>
+                        <li>Найпопулярніший SSR-фреймворк</li>
+                        <li>App Router, React Server Components</li>
+                        <li>Hybrid SSR/SSG/ISR</li>
+                        <li>Повноцінний full-stack</li>
+                    </ul>
+                </li>
+                <li><b>Nuxt (Vue)</b>
+                    <ul>
+                        <li>Стандарт для Vue SSR</li>
+                        <li>SSR + SSG + SPA в одному</li>
+                        <li>Nitro server engine</li>
+                        <li>Хороша SEO підтримка</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li><b>SvelteKit</b>
+                    <ul>
+                        <li>Дуже швидкий</li>
+                        <li>SSR за замовчуванням</li>
+                        <li>Проста конфігурація</li>
+                    </ul>
+                </li>
+                <li><b>Angular Universal</b>
+                    <ul>
+                        <li>SSR для Angular</li>
+                        <li>Використовується у великих enterprise-проєктах</li>
+                        <li>Nitro server engine</li>
+                        <li>Хороша SEO підтримка</li>
+                    </ul>
+                </li>
+                <li><b>Remix</b>
+                    <ul>
+                        <li>Сервер-first підхід</li>
+                        <li>Хороша робота з формами і кешем</li>
+                        <li>Популярний серед професійних команд</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Інструменти для Static Site Generation (SSG)</h2>
+    <p>JavaScript/TypeScript екосистема</p>
+    <div class="columns two" style="font-size: 16px; line-height: 24px;">
+        <div class="column">
+            <ul>
+                <li><b>Astro</b>
+                    <ul>
+                        <li>Islands architecture (Islands архітектура працює шляхом рендерингу більшої частини вашої
+                            сторінки у швидкий статичний HTML з меншими «Islands» JavaScript, що додаються, коли
+                            потрібна інтерактивність або персоналізація на сторінці)
+                        </li>
+                        <li>Мінімальний JavaScript</li>
+                        <li>Підтримка React/Vue/Svelte</li>
+                    </ul>
+                </li>
+                <li><b>Next.js</b>
+                    <ul>
+                        <li>SSG + ISR (Incremental Static Regeneration)</li>
+                        <li>Гібридні сайти</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="column">
+            <ul>
+                <li><b>Nuxt</b>
+                    <ul>
+                        <li>Static mode (nuxt generate)</li>
+                        <li>Підходить для контент-сайтів</li>
+                    </ul>
+                </li>
+                <li><b>Gatsby</b>
+                    <ul>
+                        <li>Сильна екосистема плагінів</li>
+                        <li>Частково витісняється Next/Astro</li>
+                        <li>Раніше дуже популярний</li>
+                    </ul>
+                </li>
+                <li><b>Eleventy (11ty)</b>
+                    <ul>
+                        <li>Без прив’язки до SPA фреймворку</li>
+                        <li>Простий і легкий</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Що обрати?</h2>
+    <table>
+        <tr>
+            <th>Задача</th>
+            <th>Інструмент</th>
+        </tr>
+        <tr>
+            <td>React-проєкт</td>
+            <td>Next.js</td>
+        </tr>
+        <tr>
+            <td>Vue-проєкт</td>
+            <td>Nuxt</td>
+        </tr>
+        <tr>
+            <td>Максимальна швидкість</td>
+            <td>Astro</td>
+        </tr>
+        <tr>
+            <td>Мінімум JS</td>
+            <td>Astro/Eleventy</td>
+        </tr>
+        <tr>
+            <td>Enterprise Angular</td>
+            <td>Angular Universal</td>
+        </tr>
+        <tr>
+            <td>Сервер-first архітектура</td>
+            <td>Remix</td>
+        </tr>
+        <tr>
+            <td>Svelte-проєкт</td>
+            <td>SvelteKit</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Що маємо на практиці</h2>
+    <b>Сучасні рішення часто поєднують:</b>
+    <ul>
+        <li>SSR+SSG+SPA</li>
+        <li>Edge rendering (рендеринг сторінки відбувається не на центральному сервері, а на географічно близьких до
+            користувача edge-вузлах (CDN-сервери): Next.js (Edge Runtime), Cloudflare Workers)
+        </li>
+        <li>Streaming SSR (HTML сторінка відправляється браузеру частинами під час генерації, а не після повного
+            рендеру)
+        </li>
+        <li>Server Components</li>
+        <li>Partial hydration/Islands architecture</li>
+    </ul>
+    <p>Тобто фреймворки стали гібридними, а не строго SSR або SSG.</p>
+</section>
+
+<section class="slide">
+    <h2>Indexing</h2>
+    <div class="columns two" style="font-size: 16px; line-height: 24px;">
+        <div class="column">
+            <p>Просканувати ≠ проіндексувати.</p>
+            <b>Після crawl Google:</b>
+            <ul>
+                <li>Аналіз контенту (текст, зображення, відео)</li>
+                <li>Розпізнавання структури HTML (аналізує DOM)</li>
+                <li>Виконання JavaScript (для SPA) за можливістю!</li>
+                <li>Визначення ключових слів та семантики</li>
+                <li>Визначає canonical URL</li>
+                <li>Оцінює унікальність контенту</li>
+                <li>Збереження в індексі</li>
+            </ul>
+        </div>
+        <div class="column">
+            <b>Якщо сторінка:</b>
+            <ul>
+                <li>дублює інші</li>
+                <li>має мало контенту</li>
+                <li>виглядає як thin content - вона може не потрапити в індекс.</li>
+            </ul>
+            <b>Що індексується:</b>
+            <ul>
+                <li>Title, meta-description</li>
+                <li>Заголовки (H1-H6)</li>
+                <li>Текстовий контент</li>
+                <li>Alt-атрибути зображень</li>
+                <li>Structured Data (Schema.org)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Canonical та дублікати</h2>
+    <p>Дублікати - одна з найчастіших проблем у великих системах.</p>
+    <b>Приклад (lля пошукової системи це різні URL):</b>
+    <ul>
+        <li>/product/1</li>
+        <li>/product?id=1</li>
+        <li>/product/1?utm=ads</li>
+    </ul>
+    <pre>
+        <code class="mark">&lt;link rel="canonical" href="https://site.com/product/1"/&gt;</code>
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Ranking</h2>
+    <p>Ранжування - найскладніший етап.</p>
+    <ul>
+        <li>релевантність</li>
+        <li>якість контенту</li>
+        <li>поведінкові сигнали</li>
+        <li>авторитет домену</li>
+        <li>performance</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Ranking</h2>
+    <p><b>Ranking (Ранжування)</b> - визначення порядку відображення сторінок у результатах пошуку.</p>
+    <ul class="columns three" style="font-size: 16px; line-height: 24px;">
+        <li><b>On-Page фактори:</b>
+            <ul>
+                <li>Релевантність контенту</li>
+                <li>Якість та унікальність</li>
+                <li>Ключові слова в title, H1, URL</li>
+                <li>Внутрішня перелінковка</li>
+                <li>Структура сторінки</li>
+            </ul>
+        </li>
+        <li><b>Off-Page фактори:</b>
+            <ul>
+                <li>Кількість та якість зворотних посилань</li>
+                <li>Авторитетність доменів-донорів</li>
+                <li>Соціальні сигнали</li>
+                <li>Згадки бренду</li>
+            </ul>
+        </li>
+        <li><b>Технічні фактори:</b>
+            <ul>
+                <li>Швидкість завантаження</li>
+                <li>Мобільна адаптивність</li>
+                <li>HTTPS</li>
+                <li>Core Web Vitals</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>White SEO</h2>
+    <div class="columns two">
+        <div class="column">
+            <p>Легальні методи оптимізації, що відповідають рекомендаціям пошукових систем.</p>
+            <b>Практики:</b>
+            <ul>
+                <li>Створення якісного, унікального контенту</li>
+                <li>Оптимізація технічних аспектів сайту</li>
+                <li>Природна побудова посилань</li>
+                <li>Покращення User Experience</li>
+                <li>Використання семантичної розмітки</li>
+            </ul>
+        </div>
+        <div class="column">
+            <b>Приклад якісного контенту:</b>
+            <img src="images/1.png" width="100%" alt="">
+        </div>
+    </div>
+    <p>Використовуйте White Hat для довгострокового успіху.</p>
+</section>
+
+<section class="slide">
+    <h2>Grey SEO</h2>
+    <div class="columns two" style="font-size: 16px; line-height: 24px;">
+        <div class="column">
+            <p>Методи на межі дозволеного, не прямо заборонені, але ризиковані.</p>
+            <b>Практики:</b>
+            <ul>
+                <li>Clickbait заголовки (але з якісним контентом)</li>
+                <li>Купівля expired domains з історією</li>
+                <li>Використання PBN (Private Blog Network) обережно</li>
+                <li>Automation tools для масових дій</li>
+                <li>Спіннінг контенту з високою унікальністю</li>
+            </ul>
+            <b>Ризики:</b>
+            <ul>
+                <li>Можливі санкції при зміні алгоритмів</li>
+                <li>Потреба постійного моніторингу</li>
+                <li>Нестабільні результати</li>
+            </ul>
+        </div>
+        <div class="column">
+            <b>Приклад:</b>
+            <img src="images/2.png" width="100%" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Black SEO</h2>
+    <div class="columns two" style="font-size: 16px; line-height: 24px;">
+        <div class="column">
+            <p>Методи, що порушують рекомендації пошукових систем для швидкого просування.</p>
+            <b>Практики (ЗАБОРОНЕНІ):</b>
+            <ul>
+                <li>Keyword stuffing - переспам ключових слів</li>
+                <li>Cloaking - різний контент для ботів та користувачів</li>
+                <li>Hidden text - прихований текст</li>
+                <li>Link farms - масова закупка посилань</li>
+                <li>Doorway pages - сторінки-пустушки</li>
+                <li>Content scraping - копіювання чужого контенту</li>
+            </ul>
+            <b>Ризики:</b>
+            <ul>
+                <li>Падіння позицій</li>
+                <li>Вилучення з індексу</li>
+                <li>Manual penalty від Google</li>
+            </ul>
+        </div>
+        <div class="column">
+            <b>Приклад:</b>
+            <img src="images/3.png" width="100%" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Порівняння підходів SEO</h2>
+    <table>
+        <tr>
+            <th>Критерій</th>
+            <th>White SEO</th>
+            <th>Grey SEO</th>
+            <th>Black SEO</th>
+        </tr>
+        <tr>
+            <td>Легальність</td>
+            <td>Повністю</td>
+            <td>Межа</td>
+            <td>Порушення</td>
+        </tr>
+        <tr>
+            <td>Швидкість</td>
+            <td>Повільно (3-6 міс)</td>
+            <td>Середньо (1-3 міс)</td>
+            <td>Швидко (дні-тижні)</td>
+        </tr>
+        <tr>
+            <td>Стабільність</td>
+            <td>Дуже висока</td>
+            <td>Середня</td>
+            <td>Низька</td>
+        </tr>
+        <tr>
+            <td>Ризик санкцій</td>
+            <td>Мінімальний</td>
+            <td>Помірний</td>
+            <td>Високий</td>
+        </tr>
+        <tr>
+            <td>Довгостроковість</td>
+            <td>Роки</td>
+            <td>Місяці-роки</td>
+            <td>Тижні-місяці</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Домени та їх вплив на SEO</h2>
+    <img src="images/4.png" width="70%" alt="">
+</section>
+
+<section class="slide">
+    <h2>Домени та їх вплив на SEO</h2>
+    <b>Вибір домену:</b>
+    <ol style="font-size: 16px; line-height: 24px;">
+        <li>
+            <b>Бренд vs Keyword</b>
+            <ul>
+                <li>comfy.ua (бренд)</li>
+                <li>kuputy-noutbuk-kyiv.com (keyword)</li>
+            </ul>
+        </li>
+        <li>
+            <b>TLD (Top-Level Domain)</b>
+            <ul>
+                <li>.com, .ua, .org - довіра</li>
+                <li>.xyz, .info - менша довіра</li>
+            </ul>
+        </li>
+        <li>
+            <b>Вік домену - старші домени мають перевагу</b>
+        </li>
+        <li>
+            <b>Історія домену - перевіряйте через Wayback Machine</b>
+        </li>
+    </ol>
+    <p>WHOIS інформація - whois example.com</p>
+    <p>Історія сайту - https://web.archive.org/web/*/example.com</p>
+</section>
+
+<section class="slide">
+    <h2>Структура URL та SEO</h2>
+    <div class="columns two">
+        <div>
+            <b>Правильна структура:</b>
+            <ul>
+                <li>https://example.com/laptops/gaming/asus-rog</li>
+                <li>https://example.com/blog/seo-guide-2025</li>
+            </ul>
+            <b>Не правильна структура:</b>
+            <ul>
+                <li>https://example.com/product?id=12345&cat=4</li>
+                <li>https://example.com/страница/товар (кирилиця)</li>
+            </ul>
+        </div>
+        <div>
+            <b>Рекомендації:</b>
+            <ul>
+                <li>Використовуйте дефіси, не підкреслення</li>
+                <li>Уникайте спеціальних символів</li>
+                <li>Коротші URL краще (до 60 символів) - Human-readable URLs (WTF?)</li>
+                <li>Включайте ключові слова</li>
+                <li>Використовуйте lowercase</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Хостинг та продуктивність</h2>
+    <div class="columns two">
+        <div>
+            <b>Вплив хостингу на SEO:</b>
+            <ul>
+                <li>Uptime - доступність сайту (мінімум 99.9%)</li>
+                <li>Швидкість відповіді сервера - TTFB < 200ms</li>
+                <li>Географія серверів - CDN для глобальних проектів</li>
+                <li>SSL/TLS сертифікати - HTTPS обов'язковий</li>
+            </ul>
+        </div>
+        <div>
+            <b>Типи хостингу:</b>
+            <ul>
+                <li>Shared Hosting - дешево, але повільно</li>
+                <li>VPS - баланс ціни та продуктивності</li>
+                <li>Dedicated Server - максимальна продуктивність</li>
+                <li>Cloud Hosting - масштабованість (AWS, Google Cloud)</li>
+                <li>Static Hosting - для JAMstack (Vercel, Netlify)</li>
+            </ul>
+        </div>
+    </div>
+    <p>Повільний сервер = менший crawl budget = гірші позиції.</p>
+</section>
+
+<section class="slide">
+    <h2>DNS та швидкість резолвінгу</h2>
+    <div class="columns two" style="font-size: 16px; line-height: 24px;">
+        <div>
+            <p>DNS (Domain Name System) - перетворює доменні імена на IP-адреси.</p>
+            <b>Процес DNS lookup:</b>
+            <ol>
+                <li>Браузер → Local cache</li>
+                <li>Local cache → Recursive resolver (ISP)</li>
+                <li>Recursive resolver → Root nameserver</li>
+                <li>Root → TLD nameserver (.com, .</li>
+                <li>TLD → Authoritative nameserver</li>
+                <li>Повернення IP-адреси</li>
+            </ol>
+        </div>
+        <div>
+            <p>DNS - перший крок у performance pipeline.</p>
+            <b>Оптимізація DNS:</b>
+            <ul>
+                <li>Використовуйте швидкі DNS-провайдери (Cloudflare, Google DNS)</li>
+                <li>DNS Prefetching для сторонніх ресурсів</li>
+                <li>Мінімізуйте кількість DNS lookups</li>
+            </ul>
+            <img src="images/5.png" width="100%" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>HTTPS та безпека</h2>
+    <b>Чому HTTPS важливий для SEO:</b>
+    <ul>
+        <li>Google використовує HTTPS як фактор ранжування (з 2014)</li>
+        <li>Браузери позначають HTTP сайти як "небезпечні"</li>
+        <li>Користувачі більше довіряють HTTPS</li>
+        <li>Необхідний для HTTP/2 та сучасних Web APIs</li>
+    </ul>
+    <b>Let's Encrypt — це безкоштовний центр сертифікації (CA), який видає
+        SSL/TLS-сертифікати для HTTPS.</b>
+    <ul>
+        <li>Безкоштовні сертифікати</li>
+        <li>Автоматичне отримання та оновлення (через ACME-протокол, напр. Certbot)</li>
+        <li>Підтримка більшості хостингів і серверів</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Типові проблеми в реальних проєктах</h2>
+    <ul>
+        <li>infinite URL space</li>
+        <li>SPA без SSR</li>
+        <li>відсутність canonical (/laptops?brand=asus та /laptops?brand=asus&sort=price - контент той самий.)</li>
+        <li>динамічні фільтри без noindex (правильна стратегія фільтрів = Категорія - Індексувати, Комбіновані
+            фільтри = noindex)
+        </li>
+        <li>JS-навігація без гіперпосилань</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Технічний чеклист для запуску</h2>
+    <div class="columns two" style="line-height: 28px;">
+        <div>
+            <ul>
+                <li>
+                    <b>Домен:</b>
+                    <ul>
+                        <li>Короткий та зрозумілий</li>
+                        <li>Відповідає бренду</li>
+                        <li>Історія домену перевірена</li>
+                        <li>SSL сертифікат встановлений</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <b>Хостинг:</b>
+                    <ul>
+                        <li>Uptime > 99.9%</li>
+                        <li>TTFB < 200ms</li>
+                        <li>Підтримка HTTP/2</li>
+                        <li>Автоматичні бекапи</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <b>DNS:</b>
+                    <ul>
+                        <li>Швидкий DNS-провайдер</li>
+                        <li>CDN налаштовано (при потребі)</li>
+                        <li>DNS prefetch додано</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <b>Безпека:</b>
+                    <ul>
+                        <li>HTTPS працює</li>
+                        <li>Security headers встановлені</li>
+                        <li>Редіректи налаштовані</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Інструменти для аналізу</h2>
+    <b>Перевірка технічних аспектів:</b>
+    <ul>
+        <li>Google Search Console - офіційний інструмент Google</li>
+        <li>Google PageSpeed Insights - швидкість та Core Web Vitals</li>
+        <li>GTmetrix - детальний аналіз продуктивності</li>
+        <li>WebPageTest - тестування з різних локацій</li>
+        <li>SSL Labs - перевірка SSL конфігурації</li>
+        <li>DNSPerf - швидкість DNS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Резюме</h2>
+    <ol style="font-size: 20px; line-height: 28px;">
+        <li>SEO - це довгострокова інвестиція в органічний трафік</li>
+        <li>Пошукові системи працюють у три етапи: Crawling - Indexing - Ranking</li>
+        <li>White Hat SEO - єдиний сталий підхід</li>
+        <li>Технічна інфраструктура критична для SEO:
+            <ul>
+                <li>Швидкий хостинг</li>
+                <li>Правильні DNS налаштування</li>
+                <li>HTTPS обов'язковий</li>
+                <li>Оптимізована структура URL</li>
+            </ul>
+        </li>
+        <li>Для frontend розробників важливо:
+            <ul>
+                <li>SSR/SSG для SEO</li>
+                <li>Оптимізація Core Web Vitals</li>
+                <li>Semantic HTML</li>
+                <li>Structured Data</li>
+            </ul>
+        </li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Корисні ресурси</h2>
+    <ul>
+        <li>
+            <a href="https://developers.google.com/search" target="_blank">Google Search Central</a>
+        </li>
+        <li>
+            <a href="https://support.google.com/webmasters" target="_blank">Google Search Console Help</a>
+        </li>
+        <li>
+            <a href="https://www.bing.com/webmasters" target="_blank">Bing Webmaster Guidelines</a>
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2 class="shout">Дякую за увагу!</h2>
+</section>
+
 <footer class="badge">
-    <a href="https://github.com/">Fork me on GitHub</a>
+    <a href="https://github.com/Computer-Science-Department-ChNU/seo-optimization">Fork me on GitHub</a>
 </footer>
 
 <div class="progress"></div>
