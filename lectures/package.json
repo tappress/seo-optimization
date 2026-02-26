@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "pdf": "shower pdf",
-    "serve": "shower serve",
+    "start": "shower serve",
     "archive": "shower archive",
     "bundle": "shower bundle",
     "publish": "shower publish"
