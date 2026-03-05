@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!--Пороги:-->
+
+<!--🟢 Добре: < 0.1-->
+<!--🟡 Потребує покращення: 0.1-0.25-->
+<!--🔴 Погано: > 0.25-->
+
+<!--Класичні проблеми:-->
+<!-- Зображення без розмірів -->
+<img src="photo.jpg" alt="...">
+<!-- Завантажується → контент зсувається вниз 🔴 -->
+
+<!-- Динамічна реклама -->
+<div id="ad-banner"></div>
+<script>loadAd('ad-banner')</script>
+<!-- Реклама з'являється → все стрибає 🔴 -->
+
+<!-- Web fonts -->
+<style>
+    body {
+        font-family: 'CustomFont', sans-serif;
+    }
+</style>
+<!-- Завантажується шрифт → текст перемальовується 🔴 -->
+
+<!-- Динамічний контент -->
+<div id="notifications"></div>
+<script>
+    setTimeout(() => {
+        // Повідомлення з'являється зверху
+        prependNotification() // Весь контент зсувається 🔴
+    }, 2000)
+</script>
+
+<!--Рішення:-->
+<!-- ЗАВЖДИ вказуйте розміри зображень -->
+<img src="photo.jpg"
+     width="800"
+     height="600"
+     alt="...">
+
+<!-- Або через CSS aspect-ratio -->
+<style>
+    .image-container {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+<!-- Резервуйте місце для реклами -->
+<div id="ad-banner" style="min-height: 250px;">
+    <!-- Реклама завантажиться сюди, не зсунувши контент -->
+</div>
+
+<!-- Font display strategy -->
+<style>
+    @font-face {
+        font-family: 'CustomFont';
+        src: url('font.woff2') format('woff2');
+        font-display: optional; /* Не перемальовує, якщо шрифт не встиг */
+    }
+</style>
+
+<!-- Або swap з fallback метриками -->
+<link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+    @font-face {
+        font-family: 'CustomFont';
+        font-display: swap;
+        size-adjust: 95%; /* Matcher fallback font size */
+    }
+</style>
+
+<!-- Transform замість margin/top для анімацій -->
+<style>
+    /* 🔴 Погано: змінює layout */
+    .notification {
+        animation: slideDown 0.3s;
+    }
+
+    @keyframes slideDown {
+        from {
+            margin-top: -100px;
+        }
+        to {
+            margin-top: 0;
+        }
+    }
+
+    /* 🟢 Добре: не впливає на layout */
+    .notification {
+        animation: slideDown 0.3s;
+    }
+
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+</style>
+</body>
+</html>

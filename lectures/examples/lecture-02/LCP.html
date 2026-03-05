@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!--Пороги:-->
+<!--🟢 Добре: < 2.5 секунди-->
+<!--🟡 Потребує покращення: 2.5-4 секунди-->
+<!--🔴 Погано: > 4 секунди-->
+
+<!--Типові LCP-елементи:-->
+<!-- Hero image -->
+<img src="hero-banner.jpg" alt="...">
+
+<!-- Hero video -->
+<video poster="poster.jpg" src="hero-video.mp4"></video>
+
+<!-- Background image -->
+<div style="background-image: url(hero-bg.jpg)"></div>
+
+<!-- Великий текстовий блок -->
+<h1>Дуже довгий заголовок...</h1>
+
+
+<!--Оптимізація LCP:-->
+<!--Проблеми:-->
+<!-- Величезне нестиснуте зображення -->
+<img src="hero-5mb.jpg" width="1920" height="1080">
+
+<!-- Блокуючий CSS -->
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="animations.css">
+<link rel="stylesheet" href="components.css">
+
+<!-- Блокуючий JavaScript -->
+<script src="some-lib.js"></script>
+<script src="analytics.js"></script>
+
+<!--Рішення:-->
+<!-- Priority Hints -->
+<img src="hero.webp"
+     fetchpriority="high"
+     width="1920"
+     height="1080"
+     alt="Hero image">
+
+<!-- Preload критичних ресурсів -->
+<link rel="preload" as="image" href="hero.webp" fetchpriority="high">
+
+<!-- Inline критичний CSS -->
+<style>
+    /* Above-the-fold styles */
+    .hero {
+        background: #000;
+        height: 100vh;
+    }
+</style>
+
+<!-- Defer некритичного CSS -->
+<link rel="stylesheet" href="non-critical.css" media="print" onload="this.media='all'">
+
+<!-- Async/defer JavaScript -->
+<script src="analytics.js" async></script>
+<script src="app.js" defer></script>
+</body>
+</html>
