@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Лекція 2. Індексація та алгоритми Google</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+
+<body class="shower list">
+
+<header class="caption">
+    <h1>Лекція 2. Індексація та алгоритми Google</h1>
+    <p>
+        <a href="index.html">Назад до змісту</a>
+    </p>
+</header>
+
+<section class="slide">
+    <h2 class="shout">
+        Лекція 2. Індексація та алгоритми Google
+    </h2>
+</section>
+
+<section class="slide">
+    <h2>План лекції:</h2>
+    <ol>
+        <li>Типи пошукових ботів</li>
+        <li>Механізм індексації сторінок і посилань</li>
+        <li>Алгоритми Google: Panda, Penguin, BERT, Helpful Content</li>
+        <li>Core Web Vitals та EEAT</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Екосистема пошукових ботів Google</h2>
+    <b>Основні боти Google:</b>
+    <ul>
+        <li>Googlebot Desktop</li>
+        <li>Googlebot Smartphone</li>
+        <li>Googlebot Image</li>
+        <li>Googlebot Video</li>
+        <li>GoogleOther</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Екосистема пошукових ботів Google</h2>
+    <b>Googlebot Desktop</b>
+    <ul>
+        <li>User-agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+        </li>
+        <li>Емулює десктоп-браузер</li>
+        <li>Стандартний viewport: 1920x1080px</li>
+    </ul>
+    <b>Googlebot Smartphone</b>
+    <ul>
+        <li>User-agent: Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like
+            Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+        </li>
+        <li>Емулює мобільний пристрій</li>
+        <li>Viewport: 412x732px</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Екосистема пошукових ботів Google</h2>
+    <b>Googlebot Image</b>
+    <ul>
+        <li>Індексує зображення</li>
+        <li>Читає alt-атрибути, file names, surrounding text</li>
+    </ul>
+    <b>Googlebot Video</b>
+    <ul>
+        <li>Індексує відео-контент</li>
+        <li>Підтримує VideoObject schema</li>
+    </ul>
+    <b>GoogleOther</b>
+    <ul>
+        <li>Експериментальний бот для нових функцій</li>
+        <li>Може не підкорятися robots.txt</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mobile-First Indexing (2019-)</h2>
+    <h3>Що змінилося:</h3>
+    <div class="columns two">
+        <div>
+            <b>До 2019 року:</b>
+            <ol>
+                <li>Google спочатку індексував десктопну версію</li>
+                <li>Потім перевіряв мобільну</li>
+            </ol>
+        </div>
+        <div>
+            <b>Після 2019 року:</b>
+            <ol>
+                <li>Google індексує спочатку мобільну версію</li>
+                <li>Тому дані для ранжування часто беруться з mobile-версії</li>
+            </ol>
+        </div>
+    </div>
+    <p>
+        Індекс у Google один - не існує окремого mobile і desktop індексу.
+        Якщо сайт взагалі не має мобільної версії, Google все одно може індексувати desktop-версію.
+    </p>
+</section>
+
+<section class="slide">
+    <h2>Mobile-First Indexing (2019-)</h2>
+    <h3>Практичний висновок для SEO</h3>
+    <div class="columns two">
+        <div>
+            <b>Сьогодні правило таке:</b>
+            <ol>
+                <li>Mobile version = основне джерело для SEO</li>
+                <li>Desktop має бути еквівалентним, але він не є основним джерелом сигналів.</li>
+            </ol>
+        </div>
+        <div>
+            <b>Найкраща практика:</b>
+            <ol>
+                <li>Responsive сайт (один HTML)</li>
+                <li>Однаковий контент на mobile і desktop</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Mobile-First Indexing (2019-)</h2>
+    <h3>Критичні помилки:</h3>
+    <div class="columns two">
+        <img src="images/6.png" width="500" alt="">
+        <div>
+            <b>Статистика:</b>
+            <ul>
+                <li>63% всіх пошуків відбувається з мобільних</li>
+                <li>73% мобільних користувачів залишають сайт, якщо він не адаптований</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Інші популярні боти</h2>
+    <ul>
+        <li>Bingbot (Microsoft Bing) - User-agent: Mozilla/5.0 (compatible; bingbot/2.0;
+            +http://www.bing.com/bingbot.htm
+        </li>
+        <li>DuckDuckBot (DuckDuckGo) - User-agent: DuckDuckBot/1.0; (+http://duckduckgo.com/duckduckbot.html)
+        </li>
+        <li>AhrefsBot - SEO-інструмент для аналізу backlinks</li>
+        <li>SemrushBot - SEO-аналітика</li>
+        <li>FacebookExternalHit - превʼю посилань у Facebook</li>
+        <li>Twitterbot - превʼю для Twitter/X</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Керування ботами через robots.txt</h2>
+    <div class="columns two" style="font-size: 15px; line-height: 24px;">
+        <div>
+            <b>Базовий приклад:</b>
+            <br>
+            # Дозволити всім ботам все
+            <br>
+            User-agent: *
+            <br>
+            Allow: /
+            <br>
+            # Заборонити сканування адмінки
+            <br>
+            Disallow: /admin/
+            <br>
+            Disallow: /private/
+            <br>
+            Disallow: /api/internal/
+            <br>
+            # Дозволити сканування публічного API
+            <br>
+            Allow: /api/public/
+            <br>
+            # Заборонити сканування динамічних параметрів
+            <br>
+            Disallow: /*?sort=
+            <br>
+            Disallow: /*?filter=
+            <br>
+            Disallow: /*&sessionid=
+            <br>
+            # Sitemap
+            <br>
+            Sitemap: https://example.com/sitemap.xml
+        </div>
+        <div>
+            <b>Специфічні правила для різних ботів:</b>
+            <br>
+            # Заборонити AhrefsBot (економимо crawl budget)
+            <br>
+            User-agent: AhrefsBot
+            <br>
+            Disallow: /
+            <br>
+            <br>
+            # Дозволити тільки Googlebot для певної секції
+            <br>
+            User-agent: *
+            <br>
+            Disallow: /beta/
+            <br>
+            User-agent: Googlebot
+            <br>
+            Allow: /beta/
+            <br>
+            <br>
+            <br>
+            <p>Важливо: robots.txt - це рекомендація, не захист! Для реального захисту слід використовувати
+                authentication.</p>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Процес індексації - крок за кроком</h2>
+    <h3>Етап 1: Discovery (Виявлення)</h3>
+    <b>Джерела URL:</b>
+    <ul>
+        <li>Sitemap.xml</li>
+        <li>Internal links (посилання на сайті)</li>
+        <li>External backlinks (посилання з інших сайтів)</li>
+        <li>URL Submission (через Search Console)</li>
+        <li>Chrome browsing data (якщо користувач увійшов в акаунт Google)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Процес індексації - крок за кроком</h2>
+    <h3>Етап 2: Crawling (Сканування)</h3>
+    <b>Псевдокод роботи Googlebot</b>
+    <ol>
+        <li>Перевірити robots.txt</li>
+        <li>Зробити HTTP-запит</li>
+        <li>Перевірити статус (200, 404, 503)</li>
+        <li>Перевірити redirect (301, 302)</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Процес індексації - крок за кроком</h2>
+    <h3>Етап 3: Rendering (Рендеринг JavaScript)</h3>
+    <ol>
+        <li>HTML завантажено</li>
+        <li>Чекаємо JavaScript (до 5 секунд)</li>
+        <li>Виконуємо JS, будуємо DOM</li>
+        <li>Екстрагуємо фінальний контент</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Процес індексації - крок за кроком</h2>
+    <h3>Етап 4: Indexing (Індексація) + Аналіз контенту</h3>
+    <ol>
+        <li>Мова сторінки</li>
+        <li>Регіон (hreflang)</li>
+        <li>Ключові слова</li>
+        <li>Structured Data (Schema.org)</li>
+        <li>Мета-теги (title, description)</li>
+        <li>Заголовки (H1-H6)</li>
+        <li>Alt-текст зображень</li>
+        <li>Внутрішні та зовнішні посилання</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Механізм індексації посилань</h2>
+    <p><b>Link Equity (передача ваги)</b> - це SEO-поняття, яке описує цінність, авторитетність та «вагу», що
+        передаються з
+        однієї сторінки на іншу через гіперпосилання. Це свого роду «цифровий голос довіри», який впливає на ранжування
+        в пошукових системах. Висока якість посилань важливіша за їх кількість, а самі посилання можуть бути як
+        внутрішніми, так і зовнішніми.
+    </p>
+    <b>Концепція PageRank:</b>
+    <ol>
+        <li>Сайт A (PageRank: 8/10) посилається на Сайт B</li>
+        <li>Сайт B отримує частину авторитетності від A</li>
+        <li>PageRank Сайту B зростає</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Механізм індексації посилань</h2>
+    <b>Формула передачі ваги:</b>
+    <p>
+        PageRank(B) = (1-d) + d × Σ(PageRank(A) / OutboundLinks(A)), де:
+        <br>
+        d = damping factor (0.85)
+        <br>
+        OutboundLinks = кількість вихідних посилань на сторінці
+    </p>
+    <img src="images/7.png" width="500" alt="">
+    <p style="line-height: 24px;">Кожне посилання передає: 8 / 4 = 2 пункти PageRank
+        <br>
+        Page B отримує: 0.15 + 0.85 × 2 = 1.85 пунктів</p>
+</section>
+
+<section class="slide">
+    <h2>Типи посилань та їх вплив</h2>
+    <ol>
+        <li>Dofollow (за замовчуванням)</li>
+        <li>Nofollow</li>
+        <li>Sponsored</li>
+        <li>UGC (User Generated Content)</li>
+        <li>Internal Links (Внутрішні)</li>
+        <li>Комбінації (rel='nofollow noopener noreferrer')</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Типи посилань та їх вплив</h2>
+    <b>Dofollow (за замовчуванням)</b>
+    <ul>
+        <li>Передає Link Juice (вагу)</li>
+        <li>Враховується в PageRank</li>
+        <li>Рекомендує Google перейти за посиланням</li>
+    </ul>
+    <pre class="mark">
+        <code>
+            &lt;a href="https://example.com"&gt;Link&lt;/a&gt;
+        </code>
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Типи посилань та їх вплив</h2>
+    <b>Nofollow</b>
+    <ul>
+        <li>НЕ передає вагу (офіційно з 2009)</li>
+        <li>З 2019 року Google може враховувати як "підказку"</li>
+        <li>Використовується для: коментарів, платних посилань, ненадійного контенту</li>
+    </ul>
+    <pre class="mark">
+        <code>
+            &lt;a href="https://example.com" rel="nofollow"&gt;Link&lt;/a&gt;
+        </code>
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Типи посилань та їх вплив</h2>
+    <b>Sponsored</b>
+    <ul>
+        <li>Позначає платні/рекламні посилання</li>
+        <li>Додано в 2019 році</li>
+        <li>НЕ передає вагу</li>
+    </ul>
+    <pre class="mark">
+        <code>
+            &lt;a href="https://example.com" rel="sponsored"&gt;Реклама&lt;/a&gt;
+        </code>
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Типи посилань та їх вплив</h2>
+    <b>UGC (User Generated Content)</b>
+    <ul>
+        <li>Для посилань від користувачів (коментарі, форуми)</li>
+        <li>Додано в 2019 році</li>
+        <li>НЕ передає вагу</li>
+    </ul>
+    <pre class="mark">
+        <code>
+            &lt;a href="https://example.com" rel="ugc"&gt;User link&lt;/a&gt;
+        </code>
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Типи посилань та їх вплив</h2>
+    <b>Internal Links (Внутрішні)</b>
+    <ul>
+        <li>Розподіляють вагу всередині сайту</li>
+        <li>Допомагають Google зрозуміти структуру</li>
+        <li>Критично важливі для SEO</li>
+    </ul>
+    <pre class="mark">
+        <code>
+            &lt;a href="/category/products" rel="ugc"&gt;Наші продукти&lt;/a&gt;
+        </code>
+    </pre>
+</section>
+
+<section class="slide">
+    <h2>Внутрішня перелінковка - архітектура сайту</h2>
+    <b>Правильна структура:</b>
+    <ul style="font-size: 19px; line-height: 32px;">
+        <li>
+            <span>Homepage (PR: 10)</span>
+            <ul>
+                <li>
+                    <span>Category 1 (PR: 8)</span>
+                    <ul>
+                        <li><span>Product 1.1 (PR: 6)</span></li>
+                        <li><span>Product 1.2 (PR: 6)</span></li>
+                        <li><span>Product 1.3 (PR: 6)</span></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <span>Category 2 (PR: 8)</span>
+                    <ul>
+                        <li><span>Product 2.1 (PR: 6)</span></li>
+                        <li><span>Product 2.2 (PR: 6)</span></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <span>Blog (PR: 7)</span>
+                    <ul>
+                        <li><span>Article 1 (PR: 5)</span></li>
+                        <li><span>Article 2 (PR: 5)</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Внутрішня перелінковка - архітектура сайту</h2>
+    <b>Breadcrumbs (хлібні крихти):</b>
+    <br>
+    <img src="images/8.png" width="580" alt="">
+</section>
+
+<section class="slide">
+    <h2>Внутрішня перелінковка - архітектура сайту</h2>
+    <b>Anchor text (текст посилання):</b>
+    <br>
+    <img src="images/9.png" width="100%" alt="">
+</section>
+
+<section class="slide">
+    <h2>Sitemap.xml - структурована мапа сайту</h2>
+    <div style="line-height: 36px;">
+        <p>
+            <b>Sitemap.xml</b> - це спеціальний XML-файл, який містить структурований список сторінок вебсайту та
+            інформацію
+            про них, призначений насамперед для пошукових систем, щоб вони могли ефективніше знаходити, сканувати та
+            індексувати сторінки сайту.
+        </p>
+        <b>Основні характеристики Sitemap.xml</b>
+        <ul>
+            <li>містить URL-адреси сторінок сайту</li>
+            <li>може включати дату останнього оновлення сторінки</li>
+            <li>може вказувати частоту оновлення сторінки (changefreq)</li>
+            <li>може задавати пріоритет сторінки відносно інших (priority)</li>
+            <li>допомагає пошуковим системам краще зрозуміти структуру сайту</li>
+        </ul>
+        <b><a href="examples/lecture-02/sitemap.xml" target="_blank">Базовий приклад</a></b>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Google Panda (2011) - боротьба з low-quality контентом</h2>
+    <div style="line-height: 36px;">
+        <p>
+            23 лютого 2011 року Google запустив оновлення, яке вплинуло на 12% пошукових запитів. Сайти з низькоякісним
+            контентом втратили 50-95% трафіку за одну ніч.
+        </p>
+        <b>Цілі Panda:</b>
+        <ul>
+            <li> Content farms (ферми контенту) - сайти з величезною кількістю поверхневих статей</li>
+            <li>Thin content (порожній контент) - сторінки без реальної цінності</li>
+            <li>Duplicate content (дублікати)</li>
+            <li>Low-quality content (низька якість)</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Google Panda (2011) - боротьба з low-quality контентом</h2>
+    <h3>Що оцінює Panda:</h3>
+    <div style="line-height: 36px;" class="columns two">
+        <div>
+            <b>Погані сигнали:</b>
+            <ul>
+                <li>Багато реклами над контентом (Above the fold)</li>
+                <li>Граматичні та орфографічні помилки</li>
+                <li>Короткий, поверхневий контент (< 300 слів)</li>
+                <li>Автоматично згенерований контент</li>
+                <li>Дублювання контенту з інших сайтів</li>
+                <li>Відсутність автора, дати публікації</li>
+                <li>Висока bounce rate, низький час на сторінці</li>
+            </ul>
+        </div>
+        <div>
+            <b>Хороші сигнали:</b>
+            <ul style="margin-bottom: 0px">
+                <li>Оригінальний, корисний контент (> 1000 слів для важливих тем)</li>
+                <li>Експертність, дослідження, унікальні дані</li>
+                <li>Регулярні оновлення контенту</li>
+                <li>Низька bounce rate, високий engagement</li>
+                <li>Соціальні сигнали (shares, likes)</li>
+            </ul>
+            <a href="examples/lecture-02/article.html" target="_blank">Приклад</a>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Google Penguin (2012) - боротьба зі спамом посилань</h2>
+    <h3>Запуск: 24 квітня 2012 року</h3>
+    <div style="line-height: 36px;" class="columns two">
+        <div>
+            <b>Цілі Penguin:</b>
+            <ul>
+                <li>Link schemes (схеми посилань)</li>
+                <li>Купівля посилань</li>
+                <li>Link farms</li>
+                <li>Over-optimization (надмірна оптимізація anchor text)</li>
+                <li>PBN (Private Blog Networks)</li>
+            </ul>
+        </div>
+        <div>
+            <b>Що каралося:</b>
+            <ol>
+                <li>Сайт A купує 10,000 посилань на біржах</li>
+                <li>Anchor text: "купити ноутбук" (100% точний збіг)</li>
+                <li>Посилання з низькоякісних сайтів</li>
+                <li>Google Penguin: -60% трафіку</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Google Penguin (2012) - боротьба зі спамом посилань</h2>
+    <div style="line-height: 36px;" class="columns two">
+        <div>
+            <b>Приклад токсичного профілю посилань (Backlinks Profile):</b>
+            <ul>
+                <li>5,000 посилань з форумів (підписи)</li>
+                <li>3,000 посилань з коментарів блогів</li>
+                <li>2,000 посилань з каталогів</li>
+                <li>95% anchor text: точна ключова фраза</li>
+                <li>Domain Diversity: низька (ті самі домени)</li>
+                <li><b>Результат: Manual penalty + падіння позицій</b></li>
+            </ul>
+        </div>
+        <div>
+            <b>Здоровий профіль посилань (Backlinks Profile (після Penguin)):</b>
+            <ol>
+                <li>Новинні сайти: 10%</li>
+                <li>Блоги в тематиці: 20%</li>
+                <li>Партнери та клієнти: 15%</li>
+                <li>Соціальні мережі: 25%</li>
+                <li>Органічні згадки: 30%</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Google Hummingbird (2013) - semantic search</h2>
+    <h3>Запуск: Серпень 2013 року (анонсовано вересень)</h3>
+    <div style="line-height: 30px;" class="columns two">
+        <div>
+            <b>Революція в пошуку:</b>
+            <ul>
+                <li>Від keyword matching до semantic understanding</li>
+                <li>Розуміння НАМІРУ запиту, а не просто слів</li>
+                <li>Врахування контексту та синонімів</li>
+            </ul>
+        </div>
+        <div>
+            <b>До Hummingbird:</b>
+            <ol>
+                <li>Запит: "найвища будівля світу"</li>
+                <li>Google шукає: сторінки з точним збігом слів</li>
+            </ol>
+            <b>Після Hummingbird:</b>
+            <ol>
+                <li>Запит: "найвища будівля світу"</li>
+                <li>Google розуміє:</li>
+                <li>Користувач хоче знати НАЗВУ будівлі</li>
+                <li>Очікується: Burj Khalifa, 828 метрів</li>
+                <li>Пов'язані концепції: хмарочоси, архітектура, Дубай</li>
+                <li>Google зберігає контекст пошуку</li>
+            </ol>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Google RankBrain (2015) - Machine Learning</h2>
+    <h3>Запуск: Жовтень 2015 року</h3>
+    <p style="line-height: 28px;">RankBrain - алгоритм машинного навчання, який допомагає Google обробляти запити, які
+        він раніше не бачив (15%
+        всіх запитів - нові).</p>
+    <b>Новий запит: "чому мій макбук швидко розряджається після оновлення"</b>
+    <div style="line-height: 28px;" class="columns two">
+        <div>
+            <b>RankBrain аналізує:</b>
+            <ul>
+                <li>"швидко розряджається" = проблема з батареєю</li>
+                <li>"макбук" = MacBook (продукт Apple)</li>
+                <li>"після оновлення" = software issue, можливо macOS</li>
+                <li>Намір: troubleshooting guide</li>
+            </ul>
+        </div>
+        <div>
+            <b>Шукає сторінки про:</b>
+            <ul>
+                <li>Battery drain after macOS update</li>
+                <li>MacBook battery life problems</li>
+                <li>Optimize MacBook battery settings</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Google RankBrain (2015) - Machine Learning</h2>
+    <div class="columns two">
+        <div>
+            <b>User Signals (поведінкові фактори):</b>
+            <ol>
+                <li>Користувач шукає: "найкращий ноутбук для студента"</li>
+                <li>Клікає на результат #3</li>
+                <li>Проводить 5 хвилин на сторінці</li>
+                <li>Не повертається до пошуку (pogo-sticking)</li>
+                <li>RankBrain: "Результат #3 релевантний" Google підвищує позицію</li>
+            </ol>
+        </div>
+        <div>
+            <b>Метрики для RankBrain:</b>
+            <ul>
+                <li>CTR (Click-Through Rate) - відсоток кліків з пошуку</li>
+                <li>Dwell Time - час на сторінці перед поверненням до пошуку</li>
+                <li>Pogo-sticking - швидке повернення до результатів (негативний сигнал)</li>
+                <li>Bounce Rate - відсоток користувачів, що покинули сайт після однієї сторінки</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Google BERT (2019) — Natural Language Processing</h2>
+    <p>BERT = Bidirectional Encoder Representations from Transformers</p>
+    <p>BERT - це технологія обробки запитів користувачів і формування результатів видачі, в основі якої лежить
+        використання машинного навчання. Мета – давати користувачам максимально точну і коректну відповідь на
+        неоднозначні (багатослівні, діалогові) пошукові запити.
+    </p>
+    <p>Іншими словами, BERT може допомогти комп'ютерам розуміти мову трохи краще, ніж люди.</p>
+    <p>BERT покликаний не просто підбирати результати видачі методом пошуку слів, які ввів користувач. Ця технологія
+        буде «зчитувати» запит як звичайна людина і вловлювати прихований сенс. Моделі BERT можуть враховувати повний
+        контекст запиту, розглядаючи слова, які йдуть до і після нього, що особливо корисно для розуміння мети пошукових
+        запитів.</p>
+</section>
+
+<section class="slide">
+    <h2>Google BERT (2019) — Natural Language Processing</h2>
+    <p>Приклади розуміння контексту:</p>
+    <ul>
+        <li>Запит: "2026 brazil traveler to usa need a visa"</li>
+        <li>До BERT: Google фокусувався на "Brazil", "USA", "visa"</li>
+        <li>Після BERT: розуміє, що "to" критично важливе — бразилець їде В США (не навпаки)</li>
+        <li>Правильна відповідь: інформація про візи для бразильців в США</li>
+    </ul>
+    <a href="examples/lecture-02/bert.html" target="_blank">Приклад розмітки</a>
+</section>
+
+<section class="slide">
+    <h2>Google MUM (2021) - Multitask Unified Model</h2>
+    <p>Запуск: Травень 2021 року (повне впровадження триває)</p>
+    <p>
+        MUM - найпотужніший AI від Google, в 1000 разів сильніший за BERT. Працює з 75 мовами та розуміє різні типи
+        контенту.
+    </p>
+    <b>MUM може аналізувати:</b>
+    <ul>
+        <li>Текст</li>
+        <li>Зображення</li>
+        <li>Відео</li>
+        <li>Аудіо</li>
+        <li>Комбінації всього вищенаведеного</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Google MUM (2021) - Multitask Unified Model</h2>
+    <p>Запит: "Я піднявся на гору Фудзі минулого літа.
+        Хочу піднятися на схожу гору в Європі наступної осені.
+        Що мені потрібно підготувати інакше?"</p>
+    <ul style="line-height: 36px">
+        <li>Фудзі (Японія, 3776м, вулканічна, помірний клімат)</li>
+        <li>Порівняння: схожі гори в Європі (Маттерхорн, Монблан?)</li>
+        <li>Сезонність: літо (Японія) vs осінь (Європа) = різниця в погоді</li>
+        <li>Підготовка:
+            <ul>
+                <li>Одяг (осінь холодніша)</li>
+                <li>Обладнання (можлива крига)</li>
+                <li>Акліматизація (Альпи можуть бути вищими)</li>
+            </ul>
+        </li>
+        <li>Відповідь: комплексні рекомендації з урахуванням всього</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Helpful Content Update (2022-2024) — боротьба з AI-спамом</h2>
+    <p>Серпень 2022 → перший запуск
+        <br>
+        Вересень 2023 → major update
+        <br>
+        2024 → continuous updates
+    </p>
+    <p>Мета: винагороджувати контент, створений ДЛЯ ЛЮДЕЙ, а не для пошукових систем.</p>
+    <b>Що караєтся:</b>
+    <ul>
+        <li>"Search engine first" контент:</li>
+        <li> AI-генерований спам:</li>
+        <li>Clickbait без substance:</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Helpful Content Update (2022-2024) — боротьба з AI-спамом</h2>
+    <b>Ключові елементи "People First":</b>
+    <ul>
+        <li>Реальний досвід (не переказ чужих оглядів)</li>
+        <li>Специфічні деталі (цифри, тести, скріншоти)</li>
+        <li>Експертність автора</li>
+        <li>Контекст використання</li>
+        <li>Оригінальні фото/відео</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Core Web Vitals (2021-present) - UX як фактор ранжування</h2>
+    <b>Три основні метрики:</b>
+    <ul>
+        <li>LCP (Largest Contentful Paint) - вимірює швидкість завантаження найбільшого видимого елемента - <a
+            href="examples/lecture-02/LCP.html" target="_blank">Приклад</a></li>
+        <li>INP (Interaction to Next Paint) - вимірює час від взаємодії до візуального відгуку - <a
+            href="examples/lecture-02/INP.html" target="_blank">Приклад</a>
+        </li>
+        <li>CLS (Cumulative Layout Shift) - вимірює візуальну стабільність (скільки контент "стрибає") - <a
+            href="examples/lecture-02/CLS.html" target="_blank">Приклад</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>E-E-A-T - концепція якості (НЕ прямий фактор)</h2>
+    <p>E-E-A-T = Experience, Expertise, Authoritativeness, Trustworthiness (Досвід, Експертність, Авторитетність,
+        Надійність)</p>
+    <b>Важливо розуміти:</b>
+    <ul>
+        <li>E-E-A-T ≠ фактор ранжування алгоритму</li>
+        <li>E-E-A-T = критерій для асесорів Google (живих людей)</li>
+        <li>Асесори тренують алгоритми</li>
+        <li>Алгоритм ОПОСЕРЕДКОВАНО враховує E-E-A-T</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>E-E-A-T - концепція якості (НЕ прямий фактор)</h2>
+    <ul>
+        <li><a href="examples/lecture-02/experience.html" target="_blank">Experience (Досвід) — додано у 2022</a></li>
+        <li><a href="examples/lecture-02/expertise.html" target="_blank">Expertise (Експертність)</a></li>
+        <li><a href="examples/lecture-02/authoritativeness.html" target="_blank">Authoritativeness (Авторитетність)</a>
+        </li>
+        <li><a href="examples/lecture-02/trustworthiness.html" target="_blank">Trustworthiness (Достовірність)</a></li>
+        <li><a href="examples/lecture-02/EEAT.html" target="_blank">Технічна реалізація E-E-A-T</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Резюме</h2>
+    <div class="columns two">
+        <ul style="font-size: 19px; line-height: 28px;">
+            <li>
+                Боти мають різне призначення
+                <ul>
+                    <li>Mobile-first indexing — пріоритет №1</li>
+                    <li>Керуйте crawl budget через robots.txt та Sitemap</li>
+                </ul>
+            </li>
+            <li>
+                Індексація — складний процес
+                <ul>
+                    <li>Discovery → Crawling → Rendering → Indexing</li>
+                    <li>JavaScript-сайти потребують SSR/SSG</li>
+                    <li>Структуровані дані критично важливі</li>
+                </ul>
+            </li>
+            <li>
+                Алгоритми еволюціонують
+                <ul>
+                    <li>Panda (2011): якість контенту</li>
+                    <li>Penguin (2012): якість посилань</li>
+                    <li>Hummingbird (2013): semantic search</li>
+                    <li>RankBrain (2015): machine learning</li>
+                    <li>BERT (2019): NLP, контекст</li>
+                    <li>MUM (2021): multimodal AI</li>
+                    <li>Helpful Content (2022–2024): people-first</li>
+                </ul>
+            </li>
+        </ul>
+        <ul style="font-size: 19px; line-height: 28px;">
+            <li>
+                Core Web Vitals — обов'язкові
+                <ul>
+                    <li>LCP &lt; 2.5s, INP &lt; 200ms, CLS &lt; 0.1</li>
+                    <li>Впливають на ранжування з 2021 року</li>
+                    <li>Моніторте через Search Console та RUM</li>
+                </ul>
+            </li>
+            <li>
+                E-E-A-T — філософія якості
+                <ul>
+                    <li>НЕ прямий фактор, але важливий</li>
+                    <li>Критичний для YMYL-тематик</li>
+                    <li>Демонструйте досвід, експертність, авторитет, довіру</li>
+                </ul>
+            </li>
+            <li>
+                Майбутнє за AI
+                <ul>
+                    <li>SGE змінює ландшафт пошуку</li>
+                    <li>Structured Data — ваш шанс бути джерелом</li>
+                    <li>Фокус на якість та експертність</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2 class="shout">Дякую за увагу!</h2>
+</section>
+
+<footer class="badge">
+    <a href="https://github.com/Computer-Science-Department-ChNU/seo-optimization">Fork me on GitHub</a>
+</footer>
+
+<div class="progress"></div>
+
+<script src="node_modules/@shower/core/dist/shower.js"></script>
+</body>
+</html>

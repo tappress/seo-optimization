@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!--  Демонстрація експертності -->
+<article>
+    <header>
+        <h1>Діагностика та лікування цукрового діабету 2 типу</h1>
+
+        <div class="medical-credentials">
+            <img src="dr-ivanov.jpg" alt="Д-р Іванов">
+            <div>
+                <p><strong>Д-р Олексій Іванов</strong></p>
+                <p>Ендокринолог вищої категорії</p>
+                <ul>
+                    <li>MD, PhD — Національний медичний університет ім. Богомольця</li>
+                    <li>15 років клінічної практики</li>
+                    <li>Автор 23 наукових публікацій</li>
+                    <li>Член Європейської асоціації діабетологів (EASD)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Схвалено іншими експертами -->
+        <p class="reviewed">Медично перевірено д-ром Петренко В.І.,
+            завідувач відділення ендокринології, КНП "Олександрівська лікарня"</p>
+
+        <time datetime="2025-02-15">Опубліковано: 15.02.2025</time>
+        <time datetime="2025-03-01">Оновлено: 01.03.2025</time>
+    </header>
+
+    <section>
+        <h2>Діагностичні критерії</h2>
+        <p>Згідно з рекомендаціями American Diabetes Association (ADA) 2025...</p>
+
+        <!-- Посилання на авторитетні джерела -->
+        <cite>
+            <a href="https://diabetesjournals.org/care/article/48/Supplement_1/S1">
+                Standards of Care in Diabetes—2025
+            </a>
+        </cite>
+    </section>
+</article>
+
+<!-- Schema.org розмітка -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "author": {
+            "@type": "Person",
+            "name": "Олексій Іванов",
+            "jobTitle": "Ендокринолог",
+            "affiliation": {
+                "@type": "MedicalOrganization",
+                "name": "Медичний центр 'Здоров'я'"
+            },
+            "hasCredential": [
+                {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "MD",
+                    "educationalLevel": "Doctorate"
+                }
+            ]
+        },
+        "reviewedBy": {
+            "@type": "Person",
+            "name": "Петренко В.І."
+        }
+    }
+</script>
+</body>
+</html>

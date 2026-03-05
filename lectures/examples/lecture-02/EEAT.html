@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!-- 1. Author bio на кожній статті -->
+<article>
+    <header>
+        <h1>{{ title }}</h1>
+
+        <div itemscope itemtype="https://schema.org/Person">
+            <img itemprop="image" src="{{ author.photo }}" alt="{{ author.name }}">
+            <span itemprop="name">{{ author.name }}</span>
+            <span itemprop="jobTitle">{{ author.title }}</span>
+
+            <meta itemprop="url" content="{{ author.profileUrl }}">
+
+            <!-- Соцмережі автора -->
+            <a itemprop="sameAs" href="{{ author.linkedin }}">LinkedIn</a>
+            <a itemprop="sameAs" href="{{ author.twitter }}">Twitter</a>
+        </div>
+
+        <time itemprop="datePublished" datetime="{{ publishDate }}">
+            {{ publishDate }}
+        </time>
+        <time itemprop="dateModified" datetime="{{ modifiedDate }}">
+            Оновлено: {{ modifiedDate }}
+        </time>
+    </header>
+</article>
+
+<!-- 2. Organization Schema -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "TechStore",
+        "url": "https://techstore.ua",
+        "logo": "https://techstore.ua/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+380-44-123-4567",
+            "contactType": "Customer Service",
+            "areaServed": "UA",
+            "availableLanguage": [
+                "Ukrainian",
+                "Russian",
+                "English"
+            ]
+        },
+        "sameAs": [
+            "https://facebook.com/techstore",
+            "https://instagram.com/techstore",
+            "https://linkedin.com/company/techstore"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "вул. Хрещатик 1",
+            "addressLocality": "Київ",
+            "postalCode": "01001",
+            "addressCountry": "UA"
+        }
+    }
+</script>
+
+<!-- 3. Breadcrumbs для структури -->
+<nav aria-label="Breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <ol>
+        <li property="itemListElement" typeof="ListItem">
+            <a property="item" href="/"><span property="name">Головна</span></a>
+            <meta property="position" content="1">
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            <a property="item" href="/blog"><span property="name">Блог</span></a>
+            <meta property="position" content="2">
+        </li>
+        <li property="itemListElement" typeof="ListItem">
+            <span property="name">Стаття</span>
+            <meta property="position" content="3">
+        </li>
+    </ol>
+</nav>
+
+<!-- 4. FAQ Schema -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Яка гарантія на ноутбуки?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Всі ноутбуки мають офіційну гарантію виробника від 12 до 36 місяців..."
+                }
+            }
+        ]
+    }
+</script>
+
+<!-- 5. Reviews / Ratings -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "ASUS ROG Strix G15",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "234",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Олексій К."
+                },
+                "datePublished": "2025-02-20",
+                "reviewBody": "Чудовий ноутбук для ігор...",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                }
+            }
+        ]
+    }
+</script>
+</body>
+</html>

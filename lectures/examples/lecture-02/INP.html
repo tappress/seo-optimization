@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<!--Пороги:-->
+
+<!--🟢 Добре: < 200 мілісекунд-->
+<!--🟡 Потребує покращення: 200-500 мс-->
+<!--🔴 Погано: > 500 мс-->
+
+<!--Приклади взаємодій:-->
+
+<!--Click на кнопку-->
+<!--Tap на мобільному-->
+<!--Keyboard input-->
+
+<!--Проблеми:-->
+
+<script>
+    // Блокування main thread
+    document.querySelector('button').addEventListener('click', () => {
+        // Синхронна важка операція
+        let result = 0
+        for (let i = 0; i < 1000000000; i++) {
+            result += Math.sqrt(i)
+        }
+        updateUI(result) // Затримка 3000мс! 🔴
+    })
+
+    // Великі bundle розміри
+    import * as lodash from 'lodash' // 70kb
+    import * as moment from 'moment' // 230kb
+    // Main thread перевантажений парсингом JS
+</script>
+
+<!--Рішення:-->
+<script>
+    // Web Worker для важких обчислень
+    const worker = new Worker('calculation-worker.js')
+
+    document.querySelector('button').addEventListener('click', () => {
+        // Швидка візуальна відповідь
+        button.classList.add('loading') // Миттєво!
+        button.disabled = true
+
+        // Важка робота в Worker
+        worker.postMessage({action: 'calculate'})
+    })
+
+    worker.onmessage = (e) => {
+        updateUI(e.data)
+        button.classList.remove('loading')
+        button.disabled = false
+    }
+
+    // Code splitting
+    import('lodash/debounce').then(({default: debounce}) => {
+        // Завантажуємо тільки debounce, а не всю бібліотеку
+    })
+
+    // Debounce для inputs
+    const handleSearch = debounce((query) => {
+        searchAPI(query)
+    }, 300)
+
+    input.addEventListener('input', (e) => {
+        // Миттєве візуальне оновлення
+        showLoader() //
+        handleSearch(e.target.value)
+    })
+</script>
+</body>
+</html>
