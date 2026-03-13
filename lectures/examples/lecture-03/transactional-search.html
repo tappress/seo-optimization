@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!-- Product page: /laptops/asus-rog-strix-g15 -->
+<div itemscope itemtype="https://schema.org/Product">
+    <h1 itemprop="name">ASUS ROG Strix G15 (2025)</h1>
+
+    <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+        <img src="asus-rog.jpg" alt="ASUS ROG Strix G15">
+        <meta itemprop="url" content="https://cdn.example.com/asus-rog.jpg">
+    </div>
+
+    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+        <meta itemprop="priceCurrency" content="UAH">
+        <meta itemprop="price" content="45999">
+        <link itemprop="availability" href="https://schema.org/InStock">
+
+        <p class="price">45,999 грн</p>
+        <p class="stock">✓ В наявності</p>
+
+        <button onclick="addToCart()" class="buy-button">
+            Купити зараз
+        </button>
+
+        <div class="delivery">
+            <ul>
+                <li>Безкоштовна доставка по Києву</li>
+                <li>Доставка завтра при замовленні до 18:00</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Aggregate Rating -->
+    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+        <meta itemprop="ratingValue" content="4.8">
+        <meta itemprop="reviewCount" content="234">
+        <p>⭐ 4.8/5 (234 відгуки)</p>
+    </div>
+
+    <!-- Product Details -->
+    <section>
+        <h2>Характеристики</h2>
+        <table>
+            <tr>
+                <td>Процесор</td>
+                <td>AMD Ryzen 9 7945HX</td>
+            </tr>
+            <tr>
+                <td>Відеокарта</td>
+                <td>NVIDIA RTX 4070 8GB</td>
+            </tr>
+            <!-- More specs -->
+        </table>
+    </section>
+</div>
+</body>
+</html>

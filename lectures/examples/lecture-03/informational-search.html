@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!-- Informational page: /blog/yak-pratsiuie-react-hooks -->
+<article itemscope itemtype="https://schema.org/TechArticle">
+    <h1>Як працюють React Hooks: повний гід для початківців</h1>
+
+    <!-- FAQ Schema для PAA -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "Що таке React Hooks?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "React Hooks — це функції, які дозволяють використовувати стан та інші можливості React без написання класів..."
+                }
+            }]
+        }
+    </script>
+
+    <section>
+        <h2>Що таке React Hooks?</h2>
+        <p>React Hooks — це функції, які дозволяють...</p>
+        <!-- Clear, detailed explanation -->
+    </section>
+
+    <section>
+        <h2>Як використовувати useState?</h2>
+        <pre>
+            <code class="language-javascript">
+            import { useState } from 'react';
+
+            function Counter() {
+              const [count, setCount] = useState(0);
+
+              return (
+                <button onClick={() => setCount(count + 1)}>
+                  Clicks: {count}
+                        </button>
+                        );
+            }
+            </code>
+        </pre>
+    </section>
+</article>
+</body>
+</html>
