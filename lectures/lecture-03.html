@@ -4,7 +4,7 @@
     <title>Лекція 3. Семантичне ядро та структура сайту</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="core/styles/styles.css">
     <link rel="stylesheet" href="styles/custom.css">
 </head>
 
@@ -275,6 +275,18 @@
 </section>
 
 <section class="slide">
+    <h2>Визначення Intent - практичні методи</h2>
+    <ul>
+        <li>Метод 1 - SERP Analysis (Google API) <a href="examples/lecture-03/serp-analysis.js"
+                                                    target="_blank">Приклад</a></li>
+        <li>Метод 2 - Keyword Modifiers<a href="examples/lecture-03/keyword-modifiers.js" target="_blank">Приклад</a>
+        </li>
+        <li>Метод 3 - Machine Learning Classification <a href="examples/lecture-03/intent-ML.py"
+                                                         target="_blank">Приклад</a></li>
+    </ul>
+</section>
+
+<section class="slide">
     <h2>Семантичне ядро - визначення та структура</h2>
     <p><b>Семантичне ядро (Semantic Core) </b>- упорядкований список всіх ключових слів, за якими планується просування
         сайту в
@@ -385,7 +397,7 @@
     <ol>
         <li>Google Autocomplete</li>
         <li>People Also Ask (PAA)</li>
-        <li> Related Searches (Пов'язані запити)</li>
+        <li>Related Searches (Пов'язані запити)</li>
     </ol>
 </section>
 
@@ -424,7 +436,7 @@
 </section>
 
 <section class="slide">
-    <h2>Кластеризація - рішення проблеми канібалізації</h2>
+    <h2>Кластеризація - розв'язання проблеми канібалізації</h2>
     <b>Проблема - Keyword Cannibalization. <br>Створено 8 окремих сторінок:</b>
     <ul>
         <li>/noutbuk-dlia-studenta</li>
@@ -439,7 +451,7 @@
 </section>
 
 <section class="slide">
-    <h2>Кластеризація - рішення проблеми канібалізації</h2>
+    <h2>Кластеризація - розв'язання проблеми канібалізації</h2>
     <b>Всі оптимізовані під схожі запити! <br> Наслідки:</b>
     <ul>
         <li>Google не розуміє, яку сторінку показувати</li>
@@ -451,7 +463,7 @@
 </section>
 
 <section class="slide">
-    <h2>Кластеризація - рішення проблеми канібалізації</h2>
+    <h2>Кластеризація - розв'язання проблеми канібалізації</h2>
     <b>З кластеризацією - кластер "Ноутбуки для студентів" (15 keywords):</b>
     <div class="columns two">
         <ul>
@@ -477,7 +489,7 @@
 </section>
 
 <section class="slide">
-    <h2>Кластеризація - рішення проблеми канібалізації</h2>
+    <h2>Кластеризація - розв'язання проблеми канібалізації</h2>
     <p>ОДНА сторінка: /noutbuky-dlia-studentiv</p>
     <b>Очікуваний результат:</b>
     <ul>
@@ -709,6 +721,6 @@
 
 <div class="progress"></div>
 
-<script src="node_modules/@shower/core/dist/shower.js"></script>
+<script src="core/shower.js"></script>
 </body>
 </html>
