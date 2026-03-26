@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+<!--Для звичайного <img>:-->
+<!-- fetchpriority - тільки для LCP!-->
+<img
+    src="macbook.webp"
+    alt="Apple MacBook Pro M3 14 дюймів"
+    width="800"
+    height="600"
+    loading="lazy"
+    fetchpriority="high"
+/>
+
+<!-- У Nuxt використовується модуль Nuxt Image (<NuxtImg>) -->
+<template>
+    <NuxtImg
+        src="/products/macbook-m3.webp"
+        alt="Apple MacBook Pro M3 14 дюймів сірий космос"
+        width="800"
+        height="600"
+        format="webp"
+        loading="eager"
+        fetchpriority="high"
+        sizes="(max-width: 768px) 100vw, 50vw"
+    />
+</template>
+
+<script>
+    // Next.js Image - правильний підхід
+    import Image from 'next/image'
+
+    <Image
+    src="/products/macbook-m3.webp"
+    alt="Apple MacBook Pro M3 14 дюймів сірий космос"
+    width={800}
+    height={600}
+    priority={true}        // ← для LCP-зображення!
+    sizes="(max-width: 768px) 100vw, 50vw"
+        />
+</script>
+</body>
+</html>
