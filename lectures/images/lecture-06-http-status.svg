@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #111827; }
+      .head { font: 700 22px Arial, sans-serif; fill: #111827; }
+      .txt { font: 500 19px Arial, sans-serif; fill: #1f2937; }
+      .small { font: 500 16px Arial, sans-serif; fill: #4b5563; }
+      .grid { stroke: #d1d5db; stroke-width: 2; }
+      .ok { fill: #ecfdf5; }
+      .warn { fill: #fff7ed; }
+      .bad { fill: #fef2f2; }
+      .neutral { fill: #f8fafc; }
+      .subtle { stroke: #d1d5db; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect x="120" y="15" width="960" height="70" class="neutral"/>
+  <line x1="320" y1="15" x2="320" y2="665" class="grid"/>
+  <line x1="760" y1="15" x2="760" y2="665" class="grid"/>
+  <line x1="120" y1="85" x2="1080" y2="245" class="grid"/>
+  <line x1="120" y1="175" x2="1080" y2="315" class="grid"/>
+  <line x1="120" y1="225" x2="1080" y2="385" class="grid"/>
+  <line x1="120" y1="295" x2="1080" y2="455" class="grid"/>
+  <line x1="120" y1="365" x2="1080" y2="525" class="grid"/>
+  <line x1="120" y1="435" x2="1080" y2="595" class="grid"/>
+  <rect x="120" y="85" width="960" height="70" class="ok"/>
+  <rect x="120" y="155" width="960" height="70" class="warn"/>
+  <rect x="120" y="225" width="960" height="70" class="warn"/>
+  <rect x="120" y="295" width="960" height="70" class="bad"/>
+  <rect x="120" y="365" width="960" height="70" class="bad"/>
+  <rect x="120" y="435" width="960" height="70" class="bad"/>
+
+  <text x="165" y="60" class="head">Code</text>
+  <text x="375" y="60" class="head">Meaning</text>
+  <text x="810" y="60" class="head">SEO action</text>
+
+  <text x="170" y="127" class="txt">200</text>
+  <text x="375" y="127" class="txt">Page is available</text>
+  <text x="810" y="127" class="txt">Indexable target page</text>
+
+  <text x="170" y="197" class="txt">301</text>
+  <text x="375" y="197" class="txt">Permanent redirect</text>
+  <text x="810" y="197" class="txt">Use for URL migration</text>
+
+  <text x="170" y="267" class="txt">302 / 307</text>
+  <text x="375" y="267" class="txt">Temporary redirect</text>
+  <text x="810" y="267" class="txt">Use only when temporary</text>
+
+  <text x="170" y="337" class="txt">404</text>
+  <text x="375" y="337" class="txt">Not found</text>
+  <text x="810" y="337" class="txt">Fix links or keep custom 404</text>
+
+  <text x="170" y="407" class="txt">410</text>
+  <text x="375" y="407" class="txt">Gone permanently</text>
+  <text x="810" y="407" class="txt">Use for removed pages</text>
+
+  <text x="170" y="477" class="txt">5xx</text>
+  <text x="375" y="477" class="txt">Server errors</text>
+  <text x="810" y="477" class="txt">Urgent fix required</text>
+</svg>

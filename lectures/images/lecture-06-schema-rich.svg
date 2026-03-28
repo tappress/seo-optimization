@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #111827; }
+      .label { font: 600 22px Arial, sans-serif; fill: #111827; }
+      .small { font: 500 17px Arial, sans-serif; fill: #4b5563; }
+      .mono { font: 500 17px 'Courier New', monospace; fill: #1f2937; }
+      .json { fill: #f8fafc; stroke: #94a3b8; stroke-width: 2; rx: 12; }
+      .serp { fill: #ecfeff; stroke: #0891b2; stroke-width: 2.5; rx: 12; }
+      .arrow { stroke: #0891b2; stroke-width: 3.5; fill: none; marker-end: url(#m); }
+      .subtle { stroke: #d1d5db; stroke-width: 1; }
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#0891b2"/>
+    </marker>
+  </defs>
+
+  <rect x="70" y="60" width="500" height="420" class="json"/>
+  <text x="95" y="125" class="label">Structured data block</text>
+  <text x="95" y="170" class="mono">{</text>
+  <text x="115" y="205" class="mono">"@context": "https://schema.org",</text>
+  <text x="115" y="240" class="mono">"@type": "Article",</text>
+  <text x="115" y="275" class="mono">"headline": "Technical SEO guide",</text>
+  <text x="115" y="310" class="mono">"author": {"@type": "Person"}</text>
+  <text x="95" y="345" class="mono">}</text>
+  <text x="95" y="400" class="small">Add only data that matches visible page content.</text>
+
+  <rect x="690" y="120" width="430" height="300" class="serp"/>
+  <text x="725" y="165" class="label">Search result preview</text>
+  <text x="725" y="205" class="small">Technical SEO: complete guide for developers</text>
+  <text x="725" y="240" class="small">example.com/technical-seo-guide</text>
+  <text x="725" y="285" class="small">Rating: *****   Author: Jane Doe</text>
+  <text x="725" y="320" class="small">Breadcrumb: Home > Blog > Technical SEO</text>
+  <text x="725" y="370" class="small">Richer snippet can improve click-through rate.</text>
+
+  <path d="M580 260 L675 260" class="arrow"/>
+</svg>
