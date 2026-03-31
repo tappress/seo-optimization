@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <rect x="80" y="120" width="190" height="150" rx="12" fill="#dbeafe" stroke="#638ac8" stroke-width="3"/>
+  <text x="175" y="185" text-anchor="middle" font-size="24" font-family="Arial" fill="#1e3a6a">1. Audit</text>
+  <text x="175" y="220" text-anchor="middle" font-size="19" font-family="Arial" fill="#1e3a6a">збір backlink data</text>
+
+  <rect x="300" y="120" width="190" height="150" rx="12" fill="#fef3c7" stroke="#c39a3a" stroke-width="3"/>
+  <text x="395" y="185" text-anchor="middle" font-size="24" font-family="Arial" fill="#664d17">2. Validate</text>
+  <text x="395" y="220" text-anchor="middle" font-size="19" font-family="Arial" fill="#664d17">справді токсичні?</text>
+
+  <rect x="520" y="120" width="190" height="150" rx="12" fill="#fee2e2" stroke="#cb7d7d" stroke-width="3"/>
+  <text x="615" y="185" text-anchor="middle" font-size="24" font-family="Arial" fill="#7a2f2f">3. Outreach</text>
+  <text x="615" y="220" text-anchor="middle" font-size="19" font-family="Arial" fill="#7a2f2f">спроба видалення</text>
+
+  <rect x="740" y="120" width="190" height="150" rx="12" fill="#ede9fe" stroke="#8a7ad0" stroke-width="3"/>
+  <text x="835" y="185" text-anchor="middle" font-size="24" font-family="Arial" fill="#4a3b94">4. Disavow file</text>
+  <text x="835" y="220" text-anchor="middle" font-size="19" font-family="Arial" fill="#4a3b94">domain:spamsite.tld</text>
+
+  <rect x="960" y="120" width="170" height="150" rx="12" fill="#dcfce7" stroke="#5ea07f" stroke-width="3"/>
+  <text x="1045" y="185" text-anchor="middle" font-size="24" font-family="Arial" fill="#1f5a3e">5. Monitor</text>
+  <text x="1045" y="220" text-anchor="middle" font-size="19" font-family="Arial" fill="#1f5a3e">ефект у GSC</text>
+
+  <line x1="270" y1="195" x2="300" y2="195" stroke="#64748b" stroke-width="4"/>
+  <line x1="490" y1="195" x2="520" y2="195" stroke="#64748b" stroke-width="4"/>
+  <line x1="710" y1="195" x2="740" y2="195" stroke="#64748b" stroke-width="4"/>
+  <line x1="930" y1="195" x2="960" y2="195" stroke="#64748b" stroke-width="4"/>
+
+  <rect x="230" y="340" width="740" height="100" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <text x="600" y="380" text-anchor="middle" font-size="24" font-family="Arial" fill="#334155">Disavow застосовують обережно, лише після валідації ризиків</text>
+  <text x="600" y="412" text-anchor="middle" font-size="20" font-family="Arial" fill="#334155">це не інструмент для "косметики" профілю</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <rect x="70" y="150" width="210" height="150" rx="12" fill="#fee2e2" stroke="#cb7d7d" stroke-width="3"/>
+  <text x="175" y="215" text-anchor="middle" font-size="24" font-family="Arial" fill="#7a2f2f">Маніпуляції</text>
+  <text x="175" y="248" text-anchor="middle" font-size="19" font-family="Arial" fill="#7a2f2f">купівля пакетів</text>
+
+  <rect x="310" y="150" width="210" height="150" rx="12" fill="#fef3c7" stroke="#c39a3a" stroke-width="3"/>
+  <text x="415" y="215" text-anchor="middle" font-size="24" font-family="Arial" fill="#664d17">Сигнали спаму</text>
+  <text x="415" y="248" text-anchor="middle" font-size="19" font-family="Arial" fill="#664d17">анкори, темп, PBN</text>
+
+  <rect x="550" y="150" width="210" height="150" rx="12" fill="#dbeafe" stroke="#638ac8" stroke-width="3"/>
+  <text x="655" y="215" text-anchor="middle" font-size="24" font-family="Arial" fill="#1e3a6a">Алгоритм / Manual</text>
+  <text x="655" y="248" text-anchor="middle" font-size="19" font-family="Arial" fill="#1e3a6a">Penguin / reviewer</text>
+
+  <rect x="790" y="150" width="210" height="150" rx="12" fill="#ede9fe" stroke="#8a7ad0" stroke-width="3"/>
+  <text x="895" y="215" text-anchor="middle" font-size="24" font-family="Arial" fill="#4a3b94">Санкція</text>
+  <text x="895" y="248" text-anchor="middle" font-size="19" font-family="Arial" fill="#4a3b94">просідання позицій</text>
+
+  <line x1="280" y1="225" x2="310" y2="225" stroke="#475569" stroke-width="4"/>
+  <line x1="520" y1="225" x2="550" y2="225" stroke="#475569" stroke-width="4"/>
+  <line x1="760" y1="225" x2="790" y2="225" stroke="#475569" stroke-width="4"/>
+
+  <rect x="400" y="360" width="400" height="90" rx="12" fill="#dcfce7" stroke="#5ea07f" stroke-width="3"/>
+  <text x="600" y="396" text-anchor="middle" font-size="24" font-family="Arial" fill="#1f5a3e">Recovery: cleanup + disavow + reconsideration</text>
+  <text x="600" y="427" text-anchor="middle" font-size="20" font-family="Arial" fill="#1f5a3e">відновлення займає тижні або місяці</text>
+
+  <line x1="895" y1="300" x2="720" y2="360" stroke="#475569" stroke-width="3"/>
+</svg>
