@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Лекція 7. Core Web Vitals та швидкість</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+
+<body class="shower list">
+
+<header class="caption">
+    <h1>Лекція 7. Core Web Vitals та швидкість</h1>
+    <p>
+        <a href="index.html">Назад до змісту</a>
+    </p>
+</header>
+
+<section class="slide">
+    <h2 class="shout">
+        Лекція 7. Core Web Vitals та швидкість
+    </h2>
+</section>
+
+<section class="slide">
+    <h2>План лекції:</h2>
+    <ol>
+        <li>LCP, INP, CLS: що саме вимірюємо</li>
+        <li>Mobile-first indexing</li>
+        <li>Швидкість сайту як фактор ранжування</li>
+        <li>Практичний підхід до оптимізації</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Чому швидкість критична для SEO</h2>
+    <ul>
+        <li>Швидкі сторінки дають кращий UX і вищу конверсію</li>
+        <li>Core Web Vitals входять до системи оцінки якості сторінки</li>
+        <li>Повільний сайт частіше втрачає мобільний трафік</li>
+        <li>Затримки завантаження збільшують bounce rate</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Місце швидкості серед сигналів ранжування</h2>
+    <img src="images/lecture-07-ranking-signal.svg" width="86%" alt="Схема ролі швидкості та Core Web Vitals у ранжуванні">
+</section>
+
+<section class="slide">
+    <h2>Core Web Vitals: три ключові метрики</h2>
+    <ul>
+        <li><b>LCP (Largest Contentful Paint)</b> - швидкість появи основного контенту</li>
+        <li><b>INP (Interaction to Next Paint)</b> - затримка реакції сторінки на взаємодію</li>
+        <li><b>CLS (Cumulative Layout Shift)</b> - стабільність макета під час завантаження</li>
+    </ul>
+    <p><b>Ціль:</b> у 75% реальних сесій сторінка має бути в "зеленій" зоні.</p>
+</section>
+
+<section class="slide">
+    <h2>Порогові значення Core Web Vitals</h2>
+    <table>
+        <tr>
+            <th>Метрика</th>
+            <th>Добре</th>
+            <th>Потрібно покращити</th>
+            <th>Погано</th>
+        </tr>
+        <tr>
+            <td>LCP</td>
+            <td>&lt;= 2.5 с</td>
+            <td>2.5 - 4.0 с</td>
+            <td>&gt; 4.0 с</td>
+        </tr>
+        <tr>
+            <td>INP</td>
+            <td>&lt;= 200 мс</td>
+            <td>200 - 500 мс</td>
+            <td>&gt; 500 мс</td>
+        </tr>
+        <tr>
+            <td>CLS</td>
+            <td>&lt;= 0.10</td>
+            <td>0.10 - 0.25</td>
+            <td>&gt; 0.25</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>LCP: що вимірює метрика</h2>
+    <p><b>LCP</b> показує час до відображення найбільшого видимого елемента у viewport.</p>
+    <ul>
+        <li>Це може бути hero-зображення, великий заголовок або банер</li>
+        <li>Метрика не дорівнює "повному завантаженню" сторінки</li>
+        <li>LCP чутливий до серверної відповіді, CSS, JS та зображень</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Де втрачається LCP</h2>
+    <img src="images/lecture-07-lcp-waterfall.svg" width="84%" alt="Діаграма етапів, які формують LCP">
+</section>
+
+<section class="slide">
+    <h2>Як покращувати LCP</h2>
+    <ul>
+        <li>Оптимізувати TTFB: CDN, кешування, швидший бекенд</li>
+        <li>Прибрати блокуючі ресурси з critical path</li>
+        <li>Стискати і правильно формати зображень (WebP/AVIF)</li>
+        <li>Прелоадити ключовий hero-ресурс</li>
+        <li>Мінімізувати обсяг критичного CSS/JS</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>INP: чому інтерактивність тепер у фокусі</h2>
+    <p><b>INP</b> оцінює найгіршу (або близьку до найгіршої) затримку взаємодії користувача зі сторінкою.</p>
+    <ul>
+        <li>Враховуються кліки, натискання клавіш, тач-взаємодії</li>
+        <li>Метрика замінила FID, бо краще описує реальний UX</li>
+        <li>Високий INP зазвичай сигналізує про перевантаження main thread</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>INP: життєвий цикл взаємодії</h2>
+    <img src="images/lecture-07-inp-lifecycle.svg" width="86%" alt="Схема етапів INP від події до візуального оновлення">
+</section>
+
+<section class="slide">
+    <h2>Як покращувати INP</h2>
+    <ul>
+        <li>Дробити long tasks на менші частини</li>
+        <li>Відкладати не критичний JS, зменшувати bundle size</li>
+        <li>Уникати важких синхронних обчислень в обробниках подій</li>
+        <li>Використовувати web workers для важкої логіки</li>
+        <li>Зменшувати складність рендерингу і DOM-операцій</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>CLS: стабільність інтерфейсу</h2>
+    <p><b>CLS</b> вимірює суму неочікуваних зсувів елементів під час життєвого циклу сторінки.</p>
+    <ul>
+        <li>Користувач натискає кнопку, але вона "стрибає" - це поганий UX</li>
+        <li>Найчастіші причини: зображення без розмірів, динамічна реклама, пізнє підвантаження шрифтів</li>
+        <li>Стабільний макет підвищує довіру і зменшує випадкові кліки</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Як покращувати CLS</h2>
+    <ul>
+        <li>Завжди задавати width/height для img, video, iframe</li>
+        <li>Резервувати місце під банери, віджети, вставки реклами</li>
+        <li>Не вставляти новий контент над уже видимим без взаємодії</li>
+        <li>Оптимізувати шрифти: preload, font-display, підбір fallback</li>
+        <li>Анімації робити через transform та opacity</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Як читати CWV-звіт</h2>
+    <img src="images/lecture-07-cwv-dashboard.svg" width="82%" alt="Приклад інтерпретації Core Web Vitals у звіті">
+</section>
+
+<section class="slide">
+    <h2>Mobile-first indexing: суть підходу</h2>
+    <p>Google індексує і оцінює сторінку насамперед за <b>мобільною</b> версією контенту.</p>
+    <ul>
+        <li>Якщо на мобільному менше контенту - це ризик втрати релевантності</li>
+        <li>SEO-сигнали (meta, structured data, internal links) мають збігатися</li>
+        <li>Швидкість на мобільних пристроях має пріоритет</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Mobile-first: що перевіряти в першу чергу</h2>
+    <img src="images/lecture-07-mobile-first.svg" width="86%" alt="Схема перевірки mobile first indexing">
+</section>
+
+<section class="slide">
+    <h2>Типові mobile-first помилки</h2>
+    <div class="columns two">
+        <ul>
+            <li>Прихований на мобільному ключовий контент</li>
+            <li>Відсутні внутрішні лінки в mobile-меню</li>
+            <li>Окремі mobile URL без коректної зв'язки</li>
+            <li>Повільні сторінки на 3G/4G</li>
+        </ul>
+        <ul>
+            <li>Важкі pop-up, що перекривають контент</li>
+            <li>Некоректні viewport та tap targets</li>
+            <li>Різні canonical/hreflang між версіями</li>
+            <li>Розбіжність structured data</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Звідки береться повільний сайт</h2>
+    <img src="images/lecture-07-speed-stack.svg" width="86%" alt="Схема факторів, що впливають на швидкість сайту">
+</section>
+
+<section class="slide">
+    <h2>Швидкі перемоги для SEO-команди</h2>
+    <ol>
+        <li>Стиснути і lazy-load зображення нижче першого екрана</li>
+        <li>Прибрати зайві сторонні скрипти (чати, трекери, віджети)</li>
+        <li>Увімкнути кешування статичних ресурсів</li>
+        <li>Мінімізувати CSS/JS і зменшити критичний шлях рендеру</li>
+        <li>Перевірити мобільні шаблони на реальних пристроях</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Інструменти для вимірювання швидкості</h2>
+    <ul>
+        <li><b>PageSpeed Insights</b> - лабораторні та польові метрики в одному звіті</li>
+        <li><b>Lighthouse</b> - детальний аудит продуктивності й рекомендації</li>
+        <li><b>Chrome DevTools Performance</b> - профілювання main thread</li>
+        <li><b>Search Console (CWV)</b> - моніторинг груп URL у продакшені</li>
+        <li><b>CrUX Vis</b> - аналіз польових даних за періодами</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Лабораторні vs польові дані</h2>
+    <img src="images/lecture-07-lab-vs-field.svg" width="86%" alt="Порівняння лабораторних і польових метрик швидкості">
+</section>
+
+<section class="slide">
+    <h2>Практичний workflow оптимізації</h2>
+    <img src="images/lecture-07-audit-flow.svg" width="84%" alt="Покрокова схема оптимізації Core Web Vitals">
+</section>
+
+<section class="slide">
+    <h2>Міні-кейс: результати після оптимізації</h2>
+    <img src="images/lecture-07-case-study.svg" width="84%" alt="Порівняння метрик до і після оптимізації швидкості">
+</section>
+
+<section class="slide">
+    <h2>Пріоритезація задач: вплив vs складність</h2>
+    <img src="images/lecture-07-priority-matrix.svg" width="84%" alt="Матриця пріоритезації SEO задач по швидкості">
+</section>
+
+<section class="slide">
+    <h2>План на 30 днів для Core Web Vitals</h2>
+    <ul>
+        <li><b>Тиждень 1:</b> аудит і baseline метрик (LCP, INP, CLS)</li>
+        <li><b>Тиждень 2:</b> правки шаблонів з найбільшим трафіком</li>
+        <li><b>Тиждень 3:</b> оптимізація JS та third-party скриптів</li>
+        <li><b>Тиждень 4:</b> повторні вимірювання, контроль регресій, backlog</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Типові помилки під час оптимізації</h2>
+    <ul>
+        <li>Оптимізація лише desktop, ігнорування mobile сценаріїв</li>
+        <li>Покращення Lighthouse score без змін у польових даних</li>
+        <li>Впровадження важких A/B або трекінг-скриптів без контролю</li>
+        <li>Відсутність performance budget у CI/CD</li>
+        <li>Разовий аудит без постійного моніторингу</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Висновки лекції</h2>
+    <ul>
+        <li>LCP, INP і CLS напряму відображають якість взаємодії користувача із сайтом</li>
+        <li>Mobile-first indexing робить мобільну швидкість ключовим пріоритетом</li>
+        <li>Оптимізація швидкості впливає і на ранжування, і на бізнес-метрики</li>
+        <li>Результат дає лише системний процес: виміряти - виправити - перевірити</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2 class="shout">Дякую за увагу!</h2>
+</section>
+
+<footer class="badge">
+    <a href="https://github.com/Computer-Science-Department-ChNU/seo-optimization">Fork me on GitHub</a>
+</footer>
+
+<div class="progress"></div>
+
+<script src="node_modules/@shower/core/dist/index.js"></script>
+</body>
+</html>
