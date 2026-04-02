@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Лекція 6. Технічне SEO</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+
+<body class="shower list">
+
+<header class="caption">
+    <h1>Лекція 6. Технічне SEO</h1>
+    <p>
+        <a href="index.html">Назад до змісту</a>
+    </p>
+</header>
+
+<section class="slide">
+    <h2 class="shout">
+        Лекція 6. Технічне SEO
+    </h2>
+</section>
+
+<section class="slide">
+    <h2>План лекції:</h2>
+    <ol>
+        <li>Дублі сторінок і canonical</li>
+        <li>HTTPS та SSL</li>
+        <li>robots.txt та sitemap.xml</li>
+        <li>Schema.org та редіректи</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Що таке технічне SEO</h2>
+    <p><b>Технічне SEO</b> - це оптимізація сайту для коректного сканування, індексації та ранжування в пошуку.</p>
+    <ul>
+        <li>Допомагає пошуковим ботам правильно читати сайт</li>
+        <li>Зменшує технічні помилки, що блокують ріст трафіку</li>
+        <li>Підсилює ефект контенту та внутрішньої перелінковки</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Дублі сторінок: чому це проблема</h2>
+    <p>Дублі - це сторінки з однаковим або дуже схожим контентом, доступні за різними URL.</p>
+    <b>Наслідки:</b>
+    <ul>
+        <li>Розмивання посилальної ваги</li>
+        <li>Витрата crawl budget</li>
+        <li>Невизначеність: яку сторінку показати в пошуку</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Типові джерела дублів</h2>
+    <ul>
+        <li>Параметри URL: <b>?sort=price</b>, <b>?utm_source=...</b></li>
+        <li>HTTP/HTTPS або www/non-www версії</li>
+        <li>Слеш наприкінці URL: <b>/category</b> і <b>/category/</b></li>
+        <li>Фільтри та пагінація в e-commerce</li>
+        <li>Окремі версії друку або копії сторінок</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Canonical: базова ідея</h2>
+    <p><b>Canonical</b> вказує пошуковій системі основну (канонічну) версію сторінки серед дублів.</p>
+    <ul>
+        <li>Використовуємо в <b>&lt;head&gt;</b> кожної дубльованої сторінки</li>
+        <li>Canonical має вести на індексовану сторінку з кодом 200</li>
+        <li>Краще ставити абсолютні URL</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Canonical: приклад реалізації</h2>
+    <img src="images/lecture-06-canonical.svg" width="86%" alt="Схема canonical для дублів URL">
+</section>
+
+<section class="slide">
+    <h2>Помилки з canonical</h2>
+    <ul>
+        <li>Canonical на 404 або на URL з редіректом</li>
+        <li>Ланцюжки canonical: A -&gt; B -&gt; C</li>
+        <li>Взаємні конфлікти: A канонізує на B, а B на A</li>
+        <li>Різні canonical для мобільної й десктопної копії без логіки</li>
+        <li>Закриття canonical-сторінки через robots.txt</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>HTTPS та SSL/TLS</h2>
+    <p><b>HTTPS</b> - це HTTP поверх захищеного шифрування TLS (історично SSL).</p>
+    <ul>
+        <li>Шифрує дані між браузером і сервером</li>
+        <li>Підтверджує автентичність сайту</li>
+        <li>Є базовою вимогою довіри та якості для SEO</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Чому HTTPS важливий для SEO</h2>
+    <ul>
+        <li>Google офіційно враховує HTTPS як сигнал ранжування</li>
+        <li>Браузери попереджають про "Not secure" на HTTP-сторінках</li>
+        <li>Безпечний сайт підвищує довіру та конверсію</li>
+        <li>Потрібен для сучасних веб-API та платіжних інтеграцій</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Міграція з HTTP на HTTPS: чекліст</h2>
+<!--    <ul style="font-size: 19px;">-->
+<!--        <li>Встановити валідний TLS-сертифікат</li>-->
+<!--        <li>Налаштувати 301 редірект з HTTP на HTTPS</li>-->
+<!--        <li>Оновити canonical, sitemap, внутрішні посилання</li>-->
+<!--        <li>Усунути mixed content (http-ресурси на https-сторінці)</li>-->
+<!--        <li>Додати HTTPS-версію сайту в Google Search Console</li>-->
+<!--    </ul>-->
+    <img src="images/lecture-06-https-migration.svg" width="80%" alt="Схема безпечної міграції з HTTP на HTTPS">
+</section>
+
+<section class="slide">
+    <h2>robots.txt: роль у технічному SEO</h2>
+    <p>Файл <b>robots.txt</b> керує доступом ботів до певних частин сайту.</p>
+    <ul>
+        <li>Розміщується в корені: <b>https://site.com/robots.txt</b></li>
+        <li>Зменшує сканування службових і дубльованих URL</li>
+        <li>Не є інструментом захисту приватних даних</li>
+    </ul>
+    <img src="images/lecture-06-robots-flow.svg" width="80%" alt="Схема роботи правил robots txt" style="position: absolute; top: 50px; right: -100px">
+</section>
+
+<section class="slide">
+    <h2>robots.txt: приклад</h2>
+    <pre class="mark">
+User-agent: *
+Disallow: /admin/
+Disallow: /cart/
+Allow: /catalog/
+
+Sitemap: https://example.com/sitemap.xml
+    </pre>
+    <p>Блокувати варто технічні розділи, а не цінний контент.</p>
+    <a href="examples/lecture-06/robots.txt" target="_blank">Приклад</a>
+</section>
+
+<section class="slide">
+    <h2>sitemap.xml: навіщо потрібен</h2>
+    <p><b>sitemap.xml</b> - це список пріоритетних URL для індексації.</p>
+    <ul>
+        <li>Полегшує пошуковикам знаходження важливих сторінок</li>
+        <li>Особливо корисний для великих сайтів і нових проєктів</li>
+        <li>Містить тільки канонічні URL з кодом відповіді 200</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>sitemap.xml: Структура sitemap index і дочірніх sitemap</h2>
+    <img src="images/lecture-06-sitemap-structure.svg" width="82%" alt="Структура sitemap index і дочірніх sitemap" style="margin-bottom: auto">
+</section>
+
+<section class="slide">
+    <h2>Що перевіряти в sitemap.xml</h2>
+    <ul>
+        <li>Немає 3xx, 4xx, 5xx URL</li>
+        <li>Немає noindex-сторінок у мапі сайту</li>
+        <li>Оновлена дата lastmod для змінених сторінок</li>
+        <li>Розбиття великих sitemap на частини через sitemap index</li>
+        <li>Подання sitemap у Google Search Console</li>
+    </ul>
+    <a href="examples/lecture-06/sitemap.xml" target="_blank">Приклад</a>
+</section>
+
+<section class="slide">
+    <h2>Schema.org: структуровані дані</h2>
+    <p><b>Schema.org</b> допомагає пошуковим системам точніше зрозуміти вміст сторінки.</p>
+    <ul>
+        <li>Формат за замовчуванням - JSON-LD</li>
+        <li>Дає шанс на rich results (рейтинги, FAQ, breadcrumbs)</li>
+        <li>Підвищує CTR через візуально багатші сніпети</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Schema.org: приклад JSON-LD</h2>
+    <pre style="font-size: 17px; line-height: 1.35;">
+&lt;script type="application/ld+json"&gt;
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Технічне SEO: базовий гайд",
+  "author": {
+    "@type": "Person",
+    "name": "Ім'я Автора"
+  }
+}
+&lt;/script&gt;
+    </pre>
+    <img src="images/lecture-06-schema-rich.svg" width="84%" alt="Схема як Schema org впливає на rich snippets">
+</section>
+
+<section class="slide">
+    <h2>Редіректи: типи та застосування</h2>
+    <ul>
+        <li><b>301</b> - постійне перенесення (основний SEO-випадок)</li>
+        <li><b>302/307</b> - тимчасове перенаправлення</li>
+        <li><b>308</b> - постійний редірект із збереженням HTTP-методу</li>
+        <li>Для SEO зазвичай потрібен один крок редіректу, без ланцюжків</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Типові помилки з редіректами</h2>
+    <div class="columns two">
+        <ul>
+            <li>Ланцюжки 301: A -&gt; B -&gt; C</li>
+            <li>Петлі редіректів (redirect loop)</li>
+            <li>302 замість 301 після постійного переїзду</li>
+            <li>Редірект на нерелевантну сторінку</li>
+        </ul>
+        <ul>
+            <li>Внутрішні лінки на старі URL</li>
+            <li>Зламані редіректи після релізу</li>
+            <li>Немає перевірки логів і crawl-звітів</li>
+            <li>Редірект 404-сторінок на головну без логіки</li>
+        </ul>
+    </div>
+    <img src="images/lecture-06-redirects.svg" width="78%" alt="Порівняння правильного редіректу та помилкових схем">
+</section>
+
+<section class="slide">
+    <h2>Швидкий аудит технічного SEO</h2>
+    <ol style="font-size: 19px;">
+        <li>Перевірити індексацію та дублікати URL</li>
+        <li>Перевірити canonical на ключових шаблонах сторінок</li>
+        <li>Перевірити HTTPS, сертифікат і mixed content</li>
+        <li>Перевірити robots.txt і sitemap.xml</li>
+        <li>Валідувати Schema.org через Rich Results Test</li>
+        <li>Перевірити редіректи (301/302, ланцюжки, петлі)</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Інструменти для роботи</h2>
+    <ul>
+        <li>Google Search Console - покриття, sitemap, індексація</li>
+        <li>Screaming Frog / Netpeak Spider - технічний краулінг</li>
+        <li>PageSpeed Insights - базова перевірка швидкості сторінок</li>
+        <li>SSL Labs - перевірка TLS-конфігурації</li>
+        <li>Rich Results Test - перевірка структурованих даних</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Crawl budget: що це і коли важливо</h2>
+    <p><b>Crawl budget</b> - обсяг URL, які бот готовий сканувати за певний час.</p>
+    <ul>
+        <li>Критично для великих сайтів (десятки тисяч сторінок)</li>
+        <li>Втрачається на дублі, фільтри та технічні URL</li>
+        <li>Оптимізація crawl budget прискорює індексацію важливих сторінок</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Як економити crawl budget</h2>
+    <ul>
+        <li>Закривати службові розділи в robots.txt</li>
+        <li>Ставити canonical для параметричних URL</li>
+        <li>Прибирати биті лінки та зайві редіректи</li>
+        <li>Тримати sitemap актуальним і чистим</li>
+        <li>Уникати «сміттєвих» сторінок без цінності</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Crawl budget: Діаграма розподілу crawl budget до і після оптимізації</h2>
+    <img src="images/lecture-06-crawl-budget.svg" width="84%" alt="Діаграма розподілу crawl budget до і після оптимізації">
+</section>
+
+<section class="slide">
+    <h2>HTTP-коди відповідей для SEO</h2>
+    <p>Коротка шпаргалка статус-кодів та дій для SEO-команди:</p>
+    <img src="images/lecture-06-http-status.svg" width="90%" alt="Таблиця HTTP кодів для технічного SEO">
+</section>
+
+<section class="slide">
+    <h2>404 vs 410: що обрати</h2>
+    <ul>
+        <li><b>404</b> - коли сторінка може з'явитися знову</li>
+        <li><b>410</b> - коли сторінка видалена назавжди</li>
+        <li>Для масово видалених URL 410 пришвидшує очищення індексу</li>
+        <li>Не редіректити всі 404 на головну - це погана практика</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Логи сервера в технічному SEO</h2>
+    <p>Лог-аналіз показує, як саме Googlebot та інші краулери обходять сайт.</p>
+    <ul>
+        <li>Які URL скануються найчастіше</li>
+        <li>Де боти витрачають бюджет на неважливі сторінки</li>
+        <li>Які сторінки важливі, але майже не скануються</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Faceted navigation і фільтри</h2>
+    <ul>
+        <li>Комбінації фільтрів часто створюють тисячі дублів URL</li>
+        <li>Індексувати потрібно лише сторінки з пошуковим попитом</li>
+        <li>Інші варіанти: canonical + обмеження в robots.txt</li>
+        <li>Слідкувати, щоб важливі фільтри лишалися доступними для індексу</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Міграція сайту: критичні ризики</h2>
+    <ul>
+        <li>Зміна URL-структури без карти 301 редіректів</li>
+        <li>Втрата canonical і мета-тегів під час релізу</li>
+        <li>Блокування продакшену через robots.txt: <b>Disallow: /</b></li>
+        <li>Відсутність пострелізного технічного аудиту</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Післярелізний технічний чекліст</h2>
+    <p>Після кожного релізу проходимо перевірку в такій послідовності:</p>
+    <img src="images/lecture-06-postrelease-checklist.svg" width="86%" alt="Візуальний післярелізний чекліст технічного SEO">
+</section>
+
+<section class="slide">
+    <h2 class="shout">Дякую за увагу!</h2>
+</section>
+
+<footer class="badge">
+    <a href="https://github.com/Computer-Science-Department-ChNU/seo-optimization">Fork me on GitHub</a>
+</footer>
+
+<div class="progress"></div>
+
+<script src="node_modules/@shower/core/dist/index.js"></script>
+</body>
+</html>

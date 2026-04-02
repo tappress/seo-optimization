@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #111827; }
+      .step { font: 600 22px Arial, sans-serif; fill: #111827; }
+      .small { font: 500 18px Arial, sans-serif; fill: #374151; }
+      .box { fill: #f9fafb; stroke: #9ca3af; stroke-width: 2; rx: 12; }
+      .good { fill: #ecfeff; stroke: #0891b2; stroke-width: 3; rx: 12; }
+      .arrow { stroke: #0891b2; stroke-width: 4; fill: none; marker-end: url(#m); }
+      .subtle { stroke: #d1d5db; stroke-width: 1; }
+      .url { font: 600 19px 'Courier New', monospace; fill: #1f2937; }
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#0891b2"/>
+    </marker>
+  </defs>
+  <rect x="80" y="130" width="300" height="140" class="box"/>
+  <text x="110" y="180" class="step">1. Install TLS cert</text>
+  <text x="110" y="215" class="small">valid chain + renewals</text>
+
+  <rect x="450" y="130" width="300" height="140" class="box"/>
+  <text x="480" y="180" class="step">2. Force 301</text>
+  <text x="480" y="215" class="small">all HTTP pages -> HTTPS</text>
+
+  <rect x="820" y="130" width="300" height="140" class="box"/>
+  <text x="850" y="180" class="step">3. Update signals</text>
+  <text x="850" y="215" class="small">canonical, sitemap, links</text>
+
+  <path d="M380 200 L440 200" class="arrow"/>
+  <path d="M750 200 L810 200" class="arrow"/>
+
+  <rect x="200" y="300" width="800" height="170" class="good"/>
+  <text x="240" y="355" class="step">Expected result</text>
+  <text x="240" y="392" class="url">http://example.com/page  --301-->  https://example.com/page</text>
+  <text x="240" y="435" class="small">No redirect chains. No mixed content. Search Console property switched to HTTPS.</text>
+</svg>
