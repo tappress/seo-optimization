@@ -65,7 +65,7 @@
 | Немає `Disallow: /` на продакшені |                        |                 |           |
 | sitemap.xml доступний |                        |                 |           |
 | У sitemap тільки 200 + canonical URL |                        |                 |           |
-| HTTP стабільно редіректить на HTTPS (301) |                        |                 |           |
+| Єдина канонічна версія домену (HTTPS, www/non-www) |                        |                 |           |
 | Немає mixed content |                        |                 |           |
 
 #### 1.3 - Canonical, редіректи, статус-коди, Schema
@@ -125,10 +125,12 @@ Sitemap: https://ваш-домен/sitemap.xml
    - вести на сторінку зі статусом `200`
    - не вести на URL з параметрами
 
-**D. Налаштувати HTTP -> HTTPS редірект (301)**
+**D. Перевірити єдину канонічну версію домену**
 
-1. Перевірити, що всі HTTP URL переводяться на HTTPS
-2. Перевірити відсутність redirect chains
+1. Перевірити, чи `http` автоматично веде на `https`
+2. Перевірити, чи немає дублювання між `www` і `non-www`
+3. Якщо альтернативні версії доступні паралельно - налаштувати `301` на єдину канонічну версію
+4. Перевірити відсутність redirect chains
 
 Таблиця контролю налаштувань:
 
@@ -137,7 +139,7 @@ Sitemap: https://ваш-домен/sitemap.xml
 | robots.txt   |      |       |       |
 | sitemap.xml  |      |       |       |
 | canonical    |      |       |       |
-| HTTP -> HTTPS|      |       |       |
+| Канонічна версія домену (HTTPS, www/non-www) |      |       |       |
 
 #### 2.2 - Виправлення знайдених помилок
 
@@ -170,7 +172,7 @@ Sitemap: https://ваш-домен/sitemap.xml
 | robots.txt              | URL + ручна перевірка правил |           |
 | sitemap.xml             | URL + перевірка у GSC         |           |
 | Canonical на ключових шаблонах | DevTools / crawler       |           |
-| HTTP -> HTTPS (301)     | curl / browser check          |           |
+| Канонічна версія домену (HTTPS, www/non-www) | curl / browser check |           |
 | 4xx/5xx та redirect chains | crawler                     |           |
 | Schema.org (1-2 ключові шаблони) | Rich Results Test      |           |
 
