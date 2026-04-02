@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <rect x="90" y="40" width="480" height="400" rx="14" fill="#ffffff" stroke="#b8c5d9" stroke-width="3"/>
+  <text x="330" y="105" text-anchor="middle" font-size="34" font-family="Arial" fill="#1f3f6d">Lab data</text>
+  <text x="130" y="170" font-size="26" font-family="Arial" fill="#273c66">- Синтетичний тест</text>
+  <text x="130" y="220" font-size="26" font-family="Arial" fill="#273c66">- Контрольовані умови</text>
+  <text x="130" y="270" font-size="26" font-family="Arial" fill="#273c66">- Швидкий дебаг</text>
+  <text x="130" y="320" font-size="26" font-family="Arial" fill="#273c66">- Lighthouse, DevTools</text>
+  <text x="130" y="400" font-size="24" font-family="Arial" fill="#5d6b80">Добре для пошуку причин</text>
+
+  <rect x="630" y="40" width="480" height="400" rx="14" fill="#ffffff" stroke="#b8c5d9" stroke-width="3"/>
+  <text x="870" y="105" text-anchor="middle" font-size="34" font-family="Arial" fill="#1f3f6d">Field data</text>
+  <text x="670" y="170" font-size="26" font-family="Arial" fill="#273c66">- Реальні користувачі</text>
+  <text x="670" y="220" font-size="26" font-family="Arial" fill="#273c66">- Різні девайси та мережі</text>
+  <text x="670" y="270" font-size="26" font-family="Arial" fill="#273c66">- Вплив сезонності</text>
+  <text x="670" y="320" font-size="26" font-family="Arial" fill="#273c66">- CrUX, Search Console</text>
+  <text x="670" y="400" font-size="24" font-family="Arial" fill="#5d6b80">Добре для SEO-оцінки</text>
+
+  <line x1="570" y1="290" x2="630" y2="290" stroke="#64748b" stroke-width="4"/>
+  <polygon points="630,290 615,282 615,298" fill="#64748b"/>
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #111827; }
+      .step { font: 600 20px Arial, sans-serif; fill: #111827; }
+      .small { font: 500 16px Arial, sans-serif; fill: #4b5563; }
+      .node { fill: #f8fafc; stroke: #94a3b8; stroke-width: 2; rx: 12; }
+      .done { fill: #ecfdf5; stroke: #16a34a; stroke-width: 2.5; rx: 12; }
+      .arrow { stroke: #16a34a; stroke-width: 3.5; fill: none; marker-end: url(#m); }
+      .subtle { stroke: #d1d5db; stroke-width: 1; }
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <rect x="70" y="85" width="230" height="120" class="done"/>
+  <text x="92" y="132" class="step">1) Canonical</text>
+  <text x="92" y="162" class="small">key templates valid</text>
+
+  <rect x="360" y="85" width="230" height="120" class="done"/>
+  <text x="382" y="132" class="step">2) robots + sitemap</text>
+  <text x="382" y="162" class="small">reachable and correct</text>
+
+  <rect x="650" y="85" width="230" height="120" class="done"/>
+  <text x="675" y="132" class="step">3) HTTPS 301</text>
+  <text x="675" y="162" class="small">no mixed content</text>
+
+  <rect x="940" y="85" width="190" height="120" class="done"/>
+  <text x="960" y="132" class="step">4) Crawl scan</text>
+  <text x="960" y="162" class="small">4xx/5xx/chains</text>
+
+  <rect x="670" y="320" width="300" height="130" class="node"/>
+  <text x="702" y="370" class="step">5) Validate Schema.org</text>
+  <text x="702" y="400" class="small">Rich Results Test</text>
+
+  <rect x="220" y="320" width="300" height="130" class="node"/>
+  <text x="252" y="370" class="step">6) Submit sitemap</text>
+  <text x="252" y="400" class="small">Search Console refresh</text>
+
+  <path d="M300 145 L350 145" class="arrow"/>
+  <path d="M590 145 L640 145" class="arrow"/>
+  <path d="M880 145 L930 145" class="arrow"/>
+  <path d="M1035 210 C1035 260, 750 290, 820 320" class="arrow"/>
+  <path d="M670 385 L530 385" class="arrow"/>
+</svg>

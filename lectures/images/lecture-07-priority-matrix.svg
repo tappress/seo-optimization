@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620">
+  <rect x="170" y="30" width="860" height="520" fill="#ffffff" stroke="#aebcd0" stroke-width="3"/>
+  <line x1="600" y1="30" x2="600" y2="550" stroke="#94a3b8" stroke-width="3"/>
+  <line x1="170" y1="290" x2="1030" y2="290" stroke="#94a3b8" stroke-width="3"/>
+
+  <text x="385" y="80" text-anchor="middle" font-size="26" font-family="Arial" fill="#7b2f2f">Високий вплив / Низька складність</text>
+  <text x="815" y="80" text-anchor="middle" font-size="26" font-family="Arial" fill="#6b4f16">Високий вплив / Висока складність</text>
+  <text x="385" y="520" text-anchor="middle" font-size="26" font-family="Arial" fill="#1f3f6c">Низький вплив / Низька складність</text>
+  <text x="815" y="520" text-anchor="middle" font-size="26" font-family="Arial" fill="#1f3f6c">Низький вплив / Висока складність</text>
+
+  <rect x="220" y="130" width="320" height="70" rx="10" fill="#dcfce7" stroke="#5ca27f" stroke-width="3"/>
+  <text x="380" y="173" text-anchor="middle" font-size="22" font-family="Arial" fill="#1e5a3d">Стиснення hero images</text>
+
+  <rect x="670" y="130" width="310" height="70" rx="10" fill="#fef3c7" stroke="#c49b3b" stroke-width="3"/>
+  <text x="825" y="173" text-anchor="middle" font-size="22" font-family="Arial" fill="#6a5017">Рефакторинг legacy JS</text>
+
+  <rect x="230" y="370" width="300" height="70" rx="10" fill="#dbeafe" stroke="#5f87c8" stroke-width="3"/>
+  <text x="380" y="413" text-anchor="middle" font-size="22" font-family="Arial" fill="#1f3f6b">Косметичні мікротвіки</text>
+
+  <rect x="670" y="370" width="300" height="70" rx="10" fill="#fee2e2" stroke="#cd7a7a" stroke-width="3"/>
+  <text x="820" y="413" text-anchor="middle" font-size="22" font-family="Arial" fill="#7b2f2f">Непродуктивні експерименти</text>
+
+  <text x="480" y="585" font-size="24" font-family="Arial" fill="#273c66">Складність виконання</text>
+  <text x="90" y="460" font-size="24" font-family="Arial" fill="#273c66" transform="rotate(-90 70,390)">Вплив на SEO</text>
+</svg>

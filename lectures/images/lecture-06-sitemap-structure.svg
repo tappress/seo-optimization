@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #111827; }
+      .label { font: 600 22px Arial, sans-serif; fill: #111827; }
+      .url { font: 500 18px 'Courier New', monospace; fill: #1f2937; }
+      .small { font: 500 16px Arial, sans-serif; fill: #4b5563; }
+      .node { fill: #f8fafc; stroke: #94a3b8; stroke-width: 2; rx: 12; }
+      .top { fill: #eff6ff; stroke: #2563eb; stroke-width: 3; rx: 12; }
+      .arrow { stroke: #2563eb; stroke-width: 3.5; fill: none; marker-end: url(#m); }
+      .subtle { stroke: #d1d5db; stroke-width: 1; }
+    </style>
+    <marker id="m" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="500" fill="#fff"/>
+
+  <rect x="380" y="65" width="440" height="105" class="top"/>
+  <text x="465" y="110" class="label">sitemap-index.xml</text>
+  <text x="450" y="140" class="url">contains links to child sitemaps</text>
+
+  <rect x="90" y="270" width="300" height="140" class="node"/>
+  <text x="125" y="320" class="label">sitemap-pages.xml</text>
+  <text x="125" y="352" class="small">main pages</text>
+  <text x="125" y="380" class="small">status: 200 only</text>
+
+  <rect x="450" y="270" width="300" height="140" class="node"/>
+  <text x="486" y="320" class="label">sitemap-blog.xml</text>
+  <text x="486" y="352" class="small">article URLs</text>
+  <text x="486" y="380" class="small">canonical URLs only</text>
+
+  <rect x="810" y="270" width="300" height="140" class="node"/>
+  <text x="844" y="320" class="label">sitemap-products.xml</text>
+  <text x="844" y="352" class="small">product cards</text>
+  <text x="844" y="380" class="small">updated with lastmod</text>
+
+  <path d="M500 170 L260 265" class="arrow"/>
+  <path d="M600 170 L600 260" class="arrow"/>
+  <path d="M700 170 L950 265" class="arrow"/>
+</svg>
