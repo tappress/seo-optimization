@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620">
+  <rect x="0" y="0" width="1200" height="620" fill="#f8fafc"/>
+
+  <rect x="0" y="80" width="400" height="460" fill="#dbeafe"/>
+  <rect x="400" y="80" width="400" height="460" fill="#dcfce7"/>
+  <rect x="800" y="80" width="400" height="460" fill="#fef3c7"/>
+
+  <rect x="0" y="0" width="400" height="80" fill="#2563eb"/>
+  <rect x="400" y="0" width="400" height="80" fill="#16a34a"/>
+  <rect x="800" y="0" width="400" height="80" fill="#d97706"/>
+
+  <text x="200" y="50" text-anchor="middle" font-family="Arial" font-size="30" fill="#ffffff">Дні 1-30</text>
+  <text x="600" y="50" text-anchor="middle" font-family="Arial" font-size="30" fill="#ffffff">Дні 31-60</text>
+  <text x="1000" y="50" text-anchor="middle" font-family="Arial" font-size="30" fill="#ffffff">Дні 61-90</text>
+
+  <text x="200" y="140" text-anchor="middle" font-family="Arial" font-size="32" fill="#1e3a8a">Quick Wins</text>
+  <text x="40" y="200" font-family="Arial" font-size="24" fill="#1e3a8a">- технічні блокери індексації</text>
+  <text x="40" y="245" font-family="Arial" font-size="24" fill="#1e3a8a">- title/description для топ URL</text>
+  <text x="40" y="290" font-family="Arial" font-size="24" fill="#1e3a8a">- cleanup дубльованого контенту</text>
+  <text x="40" y="335" font-family="Arial" font-size="24" fill="#1e3a8a">- налаштування KPI-дашборду</text>
+
+  <text x="600" y="140" text-anchor="middle" font-family="Arial" font-size="32" fill="#14532d">Scale</text>
+  <text x="440" y="200" font-family="Arial" font-size="24" fill="#14532d">- контентні кластери під intent</text>
+  <text x="440" y="245" font-family="Arial" font-size="24" fill="#14532d">- внутрішня перелінковка</text>
+  <text x="440" y="290" font-family="Arial" font-size="24" fill="#14532d">- outreach + digital PR</text>
+  <text x="440" y="335" font-family="Arial" font-size="24" fill="#14532d">- A/B тести для landing pages</text>
+
+  <text x="1000" y="140" text-anchor="middle" font-family="Arial" font-size="32" fill="#92400e">Stabilize</text>
+  <text x="840" y="200" font-family="Arial" font-size="24" fill="#92400e">- review KPI і прогнозу</text>
+  <text x="840" y="245" font-family="Arial" font-size="24" fill="#92400e">- масштабування робочих гіпотез</text>
+  <text x="840" y="290" font-family="Arial" font-size="24" fill="#92400e">- усунення регресій CWV</text>
+  <text x="840" y="335" font-family="Arial" font-size="24" fill="#92400e">- новий цикл аудиту</text>
+
+  <rect x="20" y="430" width="1160" height="170" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="3"/>
+  <text x="60" y="485" font-family="Arial" font-size="26" fill="#0f172a">Контрольні точки:</text>
+  <text x="60" y="530" font-family="Arial" font-size="24" fill="#334155">Day 30: baseline + quick wins завершено</text>
+  <text x="480" y="530" font-family="Arial" font-size="24" fill="#334155">Day 60: ріст non-brand трафіку і конверсій</text>
+  <text x="920" y="530" font-family="Arial" font-size="24" fill="#334155">Day 90: закріплений стабільний процес</text>
+</svg>
