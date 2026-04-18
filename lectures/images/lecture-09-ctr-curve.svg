@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620">
+  <rect x="0" y="0" width="1200" height="620" fill="#f8fafc"/>
+
+  <line x1="90" y1="540" x2="1130" y2="540" stroke="#334155" stroke-width="4"/>
+  <line x1="90" y1="80" x2="90" y2="540" stroke="#334155" stroke-width="4"/>
+
+  <g font-family="Arial" font-size="24" fill="#1e293b">
+    <text x="48" y="545">0</text>
+    <text x="30" y="430">10</text>
+    <text x="30" y="320">20</text>
+    <text x="30" y="210">30</text>
+    <text x="30" y="100">40</text>
+  </g>
+
+  <g fill="#93c5fd" stroke="#2563eb" stroke-width="2">
+    <rect x="130" y="110" width="70" height="430"/>
+    <rect x="230" y="220" width="70" height="320"/>
+    <rect x="330" y="305" width="70" height="235"/>
+    <rect x="430" y="360" width="70" height="180"/>
+    <rect x="530" y="402" width="70" height="138"/>
+    <rect x="630" y="430" width="70" height="110"/>
+    <rect x="730" y="455" width="70" height="85"/>
+    <rect x="830" y="475" width="70" height="65"/>
+    <rect x="930" y="492" width="70" height="48"/>
+    <rect x="1030" y="505" width="70" height="35"/>
+  </g>
+
+  <polyline points="165,110 265,220 365,305 465,360 565,402 665,430 765,455 865,475 965,492 1065,505" fill="none" stroke="#ef4444" stroke-width="6"/>
+
+  <g font-family="Arial" font-size="22" fill="#0f172a" text-anchor="middle">
+    <text x="165" y="575">1</text>
+    <text x="265" y="575">2</text>
+    <text x="365" y="575">3</text>
+    <text x="465" y="575">4</text>
+    <text x="565" y="575">5</text>
+    <text x="665" y="575">6</text>
+    <text x="765" y="575">7</text>
+    <text x="865" y="575">8</text>
+    <text x="965" y="575">9</text>
+    <text x="1065" y="575">10</text>
+  </g>
+
+  <g font-family="Arial" font-size="24" fill="#0f172a">
+    <text x="470" y="610">Позиція у видачі Google</text>
+    <text x="98" y="70">CTR, %</text>
+  </g>
+
+  <g font-family="Arial" font-size="21" fill="#1e3a8a" text-anchor="middle">
+    <text x="165" y="100">39%</text>
+    <text x="265" y="210">29%</text>
+    <text x="365" y="295">21%</text>
+    <text x="565" y="392">12%</text>
+    <text x="865" y="465">6%</text>
+    <text x="1065" y="495">3%</text>
+  </g>
+</svg>
