@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Лекція 10. Вебаналітика та SEO-стратегія</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+
+<body class="shower list">
+
+<header class="caption">
+    <h1>Лекція 10. Вебаналітика та SEO-стратегія</h1>
+    <p>
+        <a href="index.html">Назад до змісту</a>
+    </p>
+</header>
+
+<section class="slide">
+    <h2 class="shout">
+        Лекція 10. Вебаналітика та SEO-стратегія
+    </h2>
+</section>
+
+<section class="slide">
+    <h2>План лекції:</h2>
+    <ol>
+        <li>GA4 та Search Console: що і навіщо вимірювати</li>
+        <li>KPI для SEO: від метрик до бізнес-цілей</li>
+        <li>SEO-аудит: як фіксувати точки росту</li>
+        <li>Roadmap: пріоритезація та план впровадження</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Навіщо SEO-команді вебаналітика</h2>
+    <ul>
+        <li>Показує, які SEO-дії реально дають ріст трафіку і конверсій</li>
+        <li>Дозволяє відрізняти «видимість» від бізнес-результату</li>
+        <li>Дає базу для аргументованого roadmap і захисту пріоритетів</li>
+        <li>Знижує ризик рішень «на відчуттях», а не на даних</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Цикл SEO на основі даних</h2>
+    <img src="images/lecture-10-analytics-loop.svg" width="86%" alt="Цикл SEO: збір даних, аналіз, гіпотези, впровадження, перевірка результату">
+</section>
+
+<section class="slide">
+    <h2>GA4 у SEO: роль і межі</h2>
+    <p><b>GA4</b> показує, що відбувається <b>після переходу</b> користувача на сайт.</p>
+    <ul>
+        <li>Сесії, engaged sessions, події, конверсії, дохід</li>
+        <li>Поведінка за каналами, сторінками входу та аудиторіями</li>
+        <li>Дає відповідь на питання «чи приніс органічний трафік цінність»</li>
+        <li>Не замінює дані про позиції та запити - це зона Search Console</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Модель даних GA4 для SEO</h2>
+    <img src="images/lecture-10-ga4-model.svg" width="86%" alt="Схема моделі GA4: користувачі, сесії, події, конверсії та цінність">
+</section>
+
+<section class="slide">
+    <h2>Події GA4, критичні для SEO-оцінки</h2>
+    <table>
+        <tr>
+            <th>Група</th>
+            <th>Події</th>
+            <th>Навіщо для SEO</th>
+            <th>Що контролювати</th>
+        </tr>
+        <tr>
+            <td>Engagement</td>
+            <td>scroll, user_engagement</td>
+            <td>Якість споживання контенту</td>
+            <td>Частка engaged sessions</td>
+        </tr>
+        <tr>
+            <td>Навігація</td>
+            <td>view_search_results, click</td>
+            <td>Чи знаходять наступний крок</td>
+            <td>Переходи вглиб сайту</td>
+        </tr>
+        <tr>
+            <td>Ліди</td>
+            <td>generate_lead, form_submit</td>
+            <td>Внесок SEO в заявки</td>
+            <td>CR з органіки по landing page</td>
+        </tr>
+        <tr>
+            <td>E-commerce</td>
+            <td>add_to_cart, purchase</td>
+            <td>Внесок SEO в дохід</td>
+            <td>Revenue / organic session</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Формування SEO-подій у воронку</h2>
+    <img src="images/lecture-10-seo-events-funnel.svg" width="84%" alt="Воронка SEO-подій від входу на сторінку до цільової конверсії">
+</section>
+
+<section class="slide">
+    <h2>GA4-звіти, які команда дивиться щотижня</h2>
+    <ul>
+        <li><b>Traffic acquisition:</b> динаміка organic sessions і engaged sessions</li>
+        <li><b>Landing page:</b> які сторінки входу генерують цінність</li>
+        <li><b>Conversions:</b> мікро- та макроконверсії з органіки</li>
+        <li><b>Path exploration:</b> маршрути користувача після landing page</li>
+        <li><b>Segments:</b> mobile vs desktop, new vs returning, brand vs non-brand</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Search Console у SEO: роль і межі</h2>
+    <p><b>Google Search Console</b> відповідає на питання, що відбувається <b>до кліку</b> у пошуку.</p>
+    <ul>
+        <li>Покази, кліки, CTR, середня позиція за запитами та URL</li>
+        <li>Покриває індексацію, Coverage, Sitemap, Page Experience</li>
+        <li>Дає ранні сигнали просідання ще до падіння конверсій у GA4</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Потік даних у Search Console</h2>
+    <img src="images/lecture-10-gsc-pipeline.svg" width="86%" alt="Потік даних Search Console від краулінгу до звітів про кліки та індексацію">
+</section>
+
+<section class="slide">
+    <h2>Ключові звіти Search Console</h2>
+    <table>
+        <tr>
+            <th>Звіт</th>
+            <th>Що бачимо</th>
+            <th>SEO-сигнал</th>
+            <th>Типова дія</th>
+        </tr>
+        <tr>
+            <td>Performance</td>
+            <td>Запити, сторінки, CTR, позиції</td>
+            <td>Видимість і попит</td>
+            <td>Оновити сніпети, intent-match</td>
+        </tr>
+        <tr>
+            <td>Indexing</td>
+            <td>Неіндексовані URL та причини</td>
+            <td>Втрачений потенціал трафіку</td>
+            <td>Виправити canonical/robots</td>
+        </tr>
+        <tr>
+            <td>Experience</td>
+            <td>Core Web Vitals, mobile usability</td>
+            <td>Ризик поганого UX</td>
+            <td>Пріоритет технічних правок</td>
+        </tr>
+        <tr>
+            <td>Links</td>
+            <td>Внутрішні та зовнішні лінки</td>
+            <td>Сигнали авторитету</td>
+            <td>Аудит профілю і перелінковки</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Сегментація в GSC для коректних висновків</h2>
+    <img src="images/lecture-10-gsc-segment-grid.svg" width="86%" alt="Матриця сегментації GSC за типом запиту, пристроєм, регіоном і типом сторінки">
+</section>
+
+<section class="slide">
+    <h2>Чому GA4 і GSC потрібно аналізувати разом</h2>
+    <ul>
+        <li><b>GSC:</b> чи отримали показ/клік у пошуку</li>
+        <li><b>GA4:</b> що зробив користувач після кліку</li>
+        <li>Разом вони показують повний ланцюг: <b>видимість - трафік - цінність</b></li>
+        <li>Це основа для пріоритезації SEO-задач за реальним впливом</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Об'єднаний SEO-дашборд</h2>
+    <img src="images/lecture-10-seo-dashboard.svg" width="86%" alt="Приклад об'єднаного дашборду з метриками GSC і GA4 для SEO-команди">
+</section>
+
+<section class="slide">
+    <h2>KPI для SEO: принципи побудови</h2>
+    <ul>
+        <li>KPI мають зв'язувати SEO-активність із бізнес-результатом</li>
+        <li>Одна метрика не дає повної картини: потрібен набір KPI</li>
+        <li>Кожен KPI має власника, ціль, горизонт часу і поріг тривоги</li>
+        <li>Порівнювати потрібно YoY та MoM, а не лише «до/після»</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>KPI-дерево SEO</h2>
+    <img src="images/lecture-10-kpi-tree.svg" width="86%" alt="Дерево KPI від бізнес-цілі до метрик видимості, поведінки та конверсій">
+</section>
+
+<section class="slide">
+    <h2>Базовий набір KPI по рівнях</h2>
+    <table>
+        <tr>
+            <th>Рівень</th>
+            <th>Приклади KPI</th>
+            <th>Частота</th>
+            <th>Власник</th>
+        </tr>
+        <tr>
+            <td>Видимість</td>
+            <td>Impressions, Top-10 share, non-brand clicks</td>
+            <td>Щотижня</td>
+            <td>SEO спеціаліст</td>
+        </tr>
+        <tr>
+            <td>Якість трафіку</td>
+            <td>Engagement rate, scroll depth, bounce context</td>
+            <td>Щотижня</td>
+            <td>SEO + UX</td>
+        </tr>
+        <tr>
+            <td>Конверсії</td>
+            <td>Leads, Purchases, Organic CR</td>
+            <td>Щотижня/щомісяця</td>
+            <td>SEO + аналітик</td>
+        </tr>
+        <tr>
+            <td>Бізнес-ефект</td>
+            <td>Revenue, CAC, ROMI по organic</td>
+            <td>Щомісяця</td>
+            <td>Маркетинг lead</td>
+        </tr>
+    </table>
+</section>
+
+<section class="slide">
+    <h2>Як ставити KPI-цілі (SMART-підхід)</h2>
+    <ul>
+        <li><b>S (Specific):</b> збільшити non-brand кліки на комерційні кластери</li>
+        <li><b>M (Measurable):</b> +25% за 3 місяці, контроль через GSC Performance</li>
+        <li><b>A (Achievable):</b> базується на потенціалі після аудиту і benchmark конкурентів</li>
+        <li><b>R (Relevant):</b> ціль пов'язана з revenue через CR у GA4</li>
+        <li><b>T (Time-bound):</b> дедлайн і щотижневі контрольні точки в roadmap</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>SEO-аудит: що це і навіщо</h2>
+    <p><b>SEO-аудит</b> - системна перевірка технічного стану, контенту, структури та зовнішніх сигналів.</p>
+    <ul>
+        <li>Дає список бар'єрів, які стримують індексацію та ріст позицій</li>
+        <li>Пояснює причини просідання, а не тільки фіксує наслідки</li>
+        <li>Формує backlog задач для roadmap із пріоритетами</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Процес SEO-аудиту</h2>
+    <img src="images/lecture-10-audit-workflow.svg" width="86%" alt="Покроковий workflow SEO-аудиту від збору даних до плану дій">
+</section>
+
+<section class="slide">
+    <h2>Аналітичний чекліст перед SEO-аудитом</h2>
+    <div class="columns two">
+        <ul>
+            <li>Єдина структура UTM-міток і коректна атрибуція organic</li>
+            <li>Валідація ключових подій у GA4 (lead, purchase, micro conversions)</li>
+            <li>Наявність анотацій: релізи, міграції, контентні сплески</li>
+            <li>Узгодженість timezone та валют у звітах</li>
+        </ul>
+        <ul>
+            <li>Зв'язка GA4 і Search Console без втрати даних</li>
+            <li>Окремі сегменти brand / non-brand у dashboard</li>
+            <li>Фільтрація бот-трафіку та внутрішніх IP</li>
+            <li>Перевірка порівнюваності YoY та MoM по однакових сегментах</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Як оформлювати результати SEO-аудиту</h2>
+    <div class="columns two">
+        <ul>
+            <li>Issue: короткий опис проблеми однією тезою</li>
+            <li>Evidence: URL, запити, графік динаміки, скрін звіту</li>
+            <li>Impact: прогноз приросту кліків, лідів або revenue</li>
+            <li>Effort: оцінка складності та залежностей між командами</li>
+        </ul>
+        <ul>
+            <li>Owner: відповідальний за впровадження (SEO/dev/content)</li>
+            <li>Deadline: дата перевірки і дата release</li>
+            <li>Success criteria: KPI, за яким приймаємо результат</li>
+            <li>Risk note: що може спотворити інтерпретацію ефекту</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Пріоритезація задач після аудиту</h2>
+    <img src="images/lecture-10-priority-matrix.svg" width="84%" alt="Матриця впливу та складності для пріоритезації SEO-задач">
+</section>
+
+<section class="slide">
+    <h2>Roadmap SEO на 90 днів</h2>
+    <img src="images/lecture-10-roadmap-90.svg" width="86%" alt="Дорожня карта SEO на 90 днів з фазами quick wins, масштабування і стабілізації">
+</section>
+
+<section class="slide">
+    <h2>Операційний ритм команди</h2>
+    <ul>
+        <li><b>Щотижня:</b> KPI-огляд, блокери, швидкі корекції</li>
+        <li><b>Щомісяця:</b> стратегічний review, перерозподіл пріоритетів</li>
+        <li><b>Щокварталу:</b> повний аудит, оновлення цілей і forecast</li>
+        <li>Кожна задача в roadmap має owner, due date, expected impact</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Типові помилки в SEO-аналітиці</h2>
+    <ul>
+        <li>Оцінювати SEO лише за позиціями без метрик конверсії</li>
+        <li>Змішувати brand і non-brand запити в одному KPI</li>
+        <li>Робити висновки без сезонної поправки та порівняння YoY</li>
+        <li>Фокусуватися на vanity metrics без зв'язку з бізнес-ефектом</li>
+        <li>Не документувати гіпотези та результати експериментів</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Висновки лекції</h2>
+    <ul>
+        <li>GA4 і Search Console разом дають повну картину SEO-ефективності</li>
+        <li>KPI мають показувати не лише видимість, а й бізнес-цінність трафіку</li>
+        <li>SEO-аудит перетворює проблеми сайту на структурований backlog задач</li>
+        <li>Roadmap з пріоритезацією і регулярним review забезпечує стабільний ріст</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2 class="shout">Дякую за увагу!</h2>
+</section>
+
+<footer class="badge">
+    <a href="https://github.com/Computer-Science-Department-ChNU/seo-optimization">Fork me on GitHub</a>
+</footer>
+
+<div class="progress"></div>
+
+<script src="node_modules/@shower/core/dist/index.js"></script>
+</body>
+</html>

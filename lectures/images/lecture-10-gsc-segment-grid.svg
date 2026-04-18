@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620">
+  <rect x="0" y="0" width="1200" height="620" fill="#f8fafc"/>
+
+  <rect x="0" y="0" width="230" height="620" fill="#e2e8f0"/>
+  <text x="115" y="110" text-anchor="middle" font-family="Arial" font-size="30" fill="#0f172a">Інфо</text>
+  <text x="115" y="210" text-anchor="middle" font-family="Arial" font-size="30" fill="#0f172a">Комерц.</text>
+  <text x="115" y="310" text-anchor="middle" font-family="Arial" font-size="30" fill="#0f172a">Транзакц.</text>
+  <text x="115" y="410" text-anchor="middle" font-family="Arial" font-size="30" fill="#0f172a">Навігац.</text>
+  <text x="115" y="510" text-anchor="middle" font-family="Arial" font-size="30" fill="#0f172a">Бренд</text>
+
+  <rect x="230" y="0" width="970" height="90" fill="#cbd5e1"/>
+  <text x="360" y="58" text-anchor="middle" font-family="Arial" font-size="30" fill="#0f172a">Desktop</text>
+  <text x="605" y="58" text-anchor="middle" font-family="Arial" font-size="30" fill="#0f172a">Mobile</text>
+  <text x="850" y="58" text-anchor="middle" font-family="Arial" font-size="30" fill="#0f172a">Tablet</text>
+  <text x="1085" y="58" text-anchor="middle" font-family="Arial" font-size="30" fill="#0f172a">All</text>
+
+  <rect x="230" y="90" width="970" height="530" fill="#ffffff"/>
+
+  <line x1="230" y1="196" x2="1200" y2="196" stroke="#e2e8f0" stroke-width="3"/>
+  <line x1="230" y1="302" x2="1200" y2="302" stroke="#e2e8f0" stroke-width="3"/>
+  <line x1="230" y1="408" x2="1200" y2="408" stroke="#e2e8f0" stroke-width="3"/>
+  <line x1="230" y1="514" x2="1200" y2="514" stroke="#e2e8f0" stroke-width="3"/>
+
+  <line x1="472" y1="90" x2="472" y2="620" stroke="#e2e8f0" stroke-width="3"/>
+  <line x1="714" y1="90" x2="714" y2="620" stroke="#e2e8f0" stroke-width="3"/>
+  <line x1="956" y1="90" x2="956" y2="620" stroke="#e2e8f0" stroke-width="3"/>
+
+  <rect x="250" y="112" width="202" height="62" rx="10" fill="#dbeafe"/>
+  <rect x="492" y="218" width="202" height="62" rx="10" fill="#dcfce7"/>
+  <rect x="734" y="324" width="202" height="62" rx="10" fill="#fef3c7"/>
+  <rect x="976" y="430" width="202" height="62" rx="10" fill="#fee2e2"/>
+  <rect x="492" y="536" width="202" height="62" rx="10" fill="#dbeafe"/>
+
+  <text x="351" y="151" text-anchor="middle" font-family="Arial" font-size="26" fill="#1e3a8a">CTR low</text>
+  <text x="593" y="257" text-anchor="middle" font-family="Arial" font-size="26" fill="#14532d">позиції 8-12</text>
+  <text x="835" y="363" text-anchor="middle" font-family="Arial" font-size="26" fill="#92400e">канібалізація</text>
+  <text x="1077" y="469" text-anchor="middle" font-family="Arial" font-size="26" fill="#7f1d1d">intent mismatch</text>
+  <text x="593" y="575" text-anchor="middle" font-family="Arial" font-size="26" fill="#1e3a8a">бренд-сплеск</text>
+</svg>
