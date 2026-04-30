@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <polygon points="120,70 1080,70 860,450 340,450" fill="#f8fafc" stroke="#64748b" stroke-width="3"/>
+
+  <polygon points="150,95 1050,95 995,185 205,185" fill="#dbeafe"/>
+  <text x="600" y="148" text-anchor="middle" font-size="28" font-family="Arial" fill="#1e3a6a">1. Prospecting: 400 майданчиків</text>
+
+  <polygon points="205,195 995,195 945,275 255,275" fill="#dcfce7"/>
+  <text x="600" y="245" text-anchor="middle" font-size="28" font-family="Arial" fill="#1f5a3e">2. Qualified list: 150 релевантних</text>
+
+  <polygon points="255,285 945,285 900,355 300,355" fill="#fef3c7"/>
+  <text x="600" y="328" text-anchor="middle" font-size="28" font-family="Arial" fill="#664d17">3. Outreach replies: 45 відповідей</text>
+
+  <polygon points="305,365 895,365 860,425 340,425" fill="#fee2e2"/>
+  <text x="600" y="403" text-anchor="middle" font-size="28" font-family="Arial" fill="#7a2f2f">4. Live links: 20 публікацій</text>
+</svg>

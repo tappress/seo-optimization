@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <rect x="220" y="40" width="760" height="90" rx="12" fill="#dbeafe" stroke="#5f87c8" stroke-width="3"/>
+  <text x="600" y="96" text-anchor="middle" font-size="30" font-family="Arial" fill="#1f3e6b">Інфраструктура: CDN, кеш, сервер, TTFB</text>
+
+  <rect x="220" y="150" width="760" height="90" rx="12" fill="#e0f2fe" stroke="#4f9dce" stroke-width="3"/>
+  <text x="600" y="206" text-anchor="middle" font-size="30" font-family="Arial" fill="#165b7a">Front-end: CSS/JS, рендер, DOM</text>
+
+  <rect x="220" y="260" width="760" height="90" rx="12" fill="#fef3c7" stroke="#c49b3a" stroke-width="3"/>
+  <text x="600" y="316" text-anchor="middle" font-size="30" font-family="Arial" fill="#6a5017">Медіа: зображення, шрифти, відео</text>
+
+  <rect x="220" y="370" width="760" height="90" rx="12" fill="#fee2e2" stroke="#cf7a7a" stroke-width="3"/>
+  <text x="600" y="426" text-anchor="middle" font-size="30" font-family="Arial" fill="#7d2f2f">Сторонні скрипти: ads, chat, analytics</text>
+
+  <line x1="600" y1="130" x2="600" y2="150" stroke="#64748b" stroke-width="4"/>
+  <line x1="600" y1="240" x2="600" y2="260" stroke="#64748b" stroke-width="4"/>
+  <line x1="600" y1="350" x2="600" y2="370" stroke="#64748b" stroke-width="4"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <rect x="430" y="180" width="340" height="140" rx="16" fill="#e0f2fe" stroke="#4f8eb3" stroke-width="4"/>
+  <text x="600" y="240" text-anchor="middle" font-size="34" font-family="Arial" fill="#0f3e59">Authority</text>
+  <text x="600" y="278" text-anchor="middle" font-size="24" font-family="Arial" fill="#0f3e59">вага домену і сторінки</text>
+
+  <rect x="60" y="40" width="290" height="110" rx="12" fill="#dbeafe" stroke="#648cc7" stroke-width="3"/>
+  <text x="205" y="90" text-anchor="middle" font-size="26" font-family="Arial" fill="#1e3a6a">Якість донорів</text>
+  <text x="205" y="125" text-anchor="middle" font-size="20" font-family="Arial" fill="#1e3a6a">релевантність + трафік</text>
+
+  <rect x="430" y="40" width="340" height="110" rx="12" fill="#dcfce7" stroke="#5e9f7a" stroke-width="3"/>
+  <text x="600" y="90" text-anchor="middle" font-size="26" font-family="Arial" fill="#1f5a3e">Anchor profile</text>
+  <text x="600" y="125" text-anchor="middle" font-size="20" font-family="Arial" fill="#1f5a3e">природний розподіл</text>
+
+  <rect x="850" y="40" width="290" height="110" rx="12" fill="#fef3c7" stroke="#c29a3f" stroke-width="3"/>
+  <text x="995" y="90" text-anchor="middle" font-size="26" font-family="Arial" fill="#664d17">Brand signals</text>
+  <text x="995" y="125" text-anchor="middle" font-size="20" font-family="Arial" fill="#664d17">згадки та пошуковий попит</text>
+
+  <rect x="100" y="350" width="290" height="110" rx="12" fill="#fee2e2" stroke="#cb7d7d" stroke-width="3"/>
+  <text x="245" y="400" text-anchor="middle" font-size="26" font-family="Arial" fill="#7a2f2f">Link velocity</text>
+  <text x="245" y="435" text-anchor="middle" font-size="20" font-family="Arial" fill="#7a2f2f">стабільний ріст</text>
+
+  <rect x="810" y="350" width="290" height="110" rx="12" fill="#ede9fe" stroke="#8a7ad0" stroke-width="3"/>
+  <text x="955" y="400" text-anchor="middle" font-size="26" font-family="Arial" fill="#4a3b94">Spam risk</text>
+  <text x="955" y="435" text-anchor="middle" font-size="20" font-family="Arial" fill="#4a3b94">санкції та токсичність</text>
+
+  <line x1="350" y1="150" x2="450" y2="200" stroke="#64748b" stroke-width="4"/>
+  <line x1="600" y1="150" x2="600" y2="180" stroke="#64748b" stroke-width="4"/>
+  <line x1="850" y1="150" x2="750" y2="200" stroke="#64748b" stroke-width="4"/>
+  <line x1="390" y1="350" x2="500" y2="300" stroke="#64748b" stroke-width="4"/>
+  <line x1="810" y1="350" x2="700" y2="300" stroke="#64748b" stroke-width="4"/>
+</svg>

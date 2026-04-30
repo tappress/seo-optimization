@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <rect x="70" y="60" width="1060" height="90" rx="10" fill="#dcfce7" stroke="#5ea07f" stroke-width="3"/>
+  <rect x="70" y="60" width="480" height="90" rx="10" fill="#86efac"/>
+  <text x="310" y="115" text-anchor="middle" font-size="30" font-family="Arial" fill="#14532d">Branded 45%</text>
+
+  <rect x="70" y="180" width="1060" height="90" rx="10" fill="#dbeafe" stroke="#638ac8" stroke-width="3"/>
+  <rect x="70" y="180" width="320" height="90" rx="10" fill="#93c5fd"/>
+  <text x="230" y="235" text-anchor="middle" font-size="30" font-family="Arial" fill="#1e3a6a">Naked URL 30%</text>
+
+  <rect x="70" y="300" width="1060" height="90" rx="10" fill="#fef3c7" stroke="#c39a3a" stroke-width="3"/>
+  <rect x="70" y="300" width="190" height="90" rx="10" fill="#fcd34d"/>
+  <text x="165" y="355" text-anchor="middle" font-size="28" font-family="Arial" fill="#664d17">Partial 18%</text>
+
+  <rect x="70" y="420" width="1060" height="50" rx="10" fill="#fee2e2" stroke="#cb7d7d" stroke-width="3"/>
+  <rect x="70" y="420" width="75" height="50" rx="10" fill="#fda4af"/>
+  <text x="220" y="454" text-anchor="start" font-size="24" font-family="Arial" fill="#7a2f2f">Exact match до 7%</text>
+
+  <text x="900" y="455" text-anchor="middle" font-size="22" font-family="Arial" fill="#334155">Приклад безпечного anchor mix</text>
+</svg>

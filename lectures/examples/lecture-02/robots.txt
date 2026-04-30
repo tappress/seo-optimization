@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /api/
+Disallow: /_nuxt/
+Disallow: /admin/
+Disallow: /login
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml

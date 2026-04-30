@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400">
+  <defs>
+    <style>
+      .title { font: 700 34px Arial, sans-serif; fill: #111827; }
+      .label { font: 600 22px Arial, sans-serif; fill: #111827; }
+      .small { font: 500 17px Arial, sans-serif; fill: #4b5563; }
+      .good { fill: #ecfdf5; stroke: #16a34a; stroke-width: 2.5; rx: 12; }
+      .bad { fill: #fef2f2; stroke: #dc2626; stroke-width: 2.5; rx: 12; }
+      .node { fill: #fff; stroke: #9ca3af; stroke-width: 2; rx: 10; }
+      .arrowG { stroke: #16a34a; stroke-width: 3.5; fill: none; marker-end: url(#mg); }
+      .arrowR { stroke: #dc2626; stroke-width: 3.5; fill: none; marker-end: url(#mr); }
+      .subtle { stroke: #d1d5db; stroke-width: 1; }
+      .url { font: 500 17px 'Courier New', monospace; fill: #1f2937; }
+    </style>
+    <marker id="mg" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#16a34a"/>
+    </marker>
+    <marker id="mr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="700" fill="#fff"/>
+
+  <rect x="80" y="50" width="500" height="300" class="good"/>
+  <text x="110" y="130" class="label">Good: single 301 hop</text>
+  <rect x="120" y="185" width="170" height="65" class="node"/>
+  <text x="138" y="225" class="url">/old-page</text>
+  <rect x="360" y="185" width="180" height="65" class="node"/>
+  <text x="378" y="225" class="url">/new-page</text>
+  <path d="M295 218 L355 218" class="arrowG"/>
+  <text x="310" y="180" class="small">301</text>
+
+  <text x="120" y="330" class="small">Fast crawl, less latency, clean signal transfer.</text>
+
+  <rect x="620" y="50" width="500" height="300" class="bad"/>
+  <text x="650" y="130" class="label">Bad: redirect chain / loop</text>
+  <rect x="650" y="185" width="130" height="65" class="node"/>
+  <text x="676" y="225" class="url">/A</text>
+  <rect x="820" y="185" width="130" height="65" class="node"/>
+  <text x="846" y="225" class="url">/B</text>
+  <rect x="990" y="185" width="100" height="65" class="node"/>
+  <text x="1010" y="225" class="url">/C</text>
+  <path d="M785 218 L815 218" class="arrowR"/>
+  <path d="M955 218 L985 218" class="arrowR"/>
+  <path d="M1040 255 C1040 310, 820 310, 720 255" class="arrowR"/>
+  <text x="797" y="300" class="small">301</text>
+  <text x="967" y="300" class="small">301</text>
+  <text x="760" y="450" class="small">Extra hops waste crawl budget and hurt UX.</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <rect x="470" y="190" width="260" height="120" rx="14" fill="#e0f2fe" stroke="#4f8eb3" stroke-width="4"/>
+  <text x="600" y="245" text-anchor="middle" font-size="28" font-family="Arial" fill="#0f3e59">Головна</text>
+  <text x="600" y="278" text-anchor="middle" font-size="22" font-family="Arial" fill="#0f3e59">branded / URL</text>
+
+  <rect x="120" y="60" width="290" height="110" rx="12" fill="#dcfce7" stroke="#5ea07f" stroke-width="3"/>
+  <text x="265" y="110" text-anchor="middle" font-size="24" font-family="Arial" fill="#1f5a3e">Категорії</text>
+  <text x="265" y="140" text-anchor="middle" font-size="20" font-family="Arial" fill="#1f5a3e">partial + generic</text>
+
+  <rect x="790" y="60" width="290" height="110" rx="12" fill="#dbeafe" stroke="#638ac8" stroke-width="3"/>
+  <text x="935" y="110" text-anchor="middle" font-size="24" font-family="Arial" fill="#1e3a6a">Блог</text>
+  <text x="935" y="140" text-anchor="middle" font-size="20" font-family="Arial" fill="#1e3a6a">інформаційні анкори</text>
+
+  <rect x="120" y="340" width="290" height="110" rx="12" fill="#fef3c7" stroke="#c39a3a" stroke-width="3"/>
+  <text x="265" y="390" text-anchor="middle" font-size="24" font-family="Arial" fill="#664d17">Landing pages</text>
+  <text x="265" y="420" text-anchor="middle" font-size="20" font-family="Arial" fill="#664d17">точковий exact match</text>
+
+  <rect x="790" y="340" width="290" height="110" rx="12" fill="#fee2e2" stroke="#cb7d7d" stroke-width="3"/>
+  <text x="935" y="390" text-anchor="middle" font-size="24" font-family="Arial" fill="#7a2f2f">Сервісні сторінки</text>
+  <text x="935" y="420" text-anchor="middle" font-size="20" font-family="Arial" fill="#7a2f2f">бренд + CTA</text>
+
+  <line x1="410" y1="130" x2="470" y2="210" stroke="#64748b" stroke-width="4"/>
+  <line x1="790" y1="130" x2="730" y2="210" stroke="#64748b" stroke-width="4"/>
+  <line x1="410" y1="370" x2="470" y2="290" stroke="#64748b" stroke-width="4"/>
+  <line x1="790" y1="370" x2="730" y2="290" stroke="#64748b" stroke-width="4"/>
+</svg>
