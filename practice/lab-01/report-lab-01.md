@@ -175,7 +175,7 @@ curl https://hard-wired.org
 site:hard-wired.org
 ```
 
-![Результати Google за запитом site:hard-wired.org](img/google-site:hard-wired-org.png)
+![Результати Google за запитом site:hard-wired.org](img/google-site-hard-wired-org.png)
 
 Google знайшов сторінки: Hard Wired Web Tools, Tools Directory, Data Converter, GIF Maker, Video Trimmer, Audio Crop Tool, AI Text Cleaner, Batch Image Converter, Image Background Remover, Word to PDF та інші.
 
