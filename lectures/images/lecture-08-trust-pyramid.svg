@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <polygon points="600,40 1080,450 120,450" fill="#f8fafc" stroke="#64748b" stroke-width="3"/>
+
+  <polygon points="600,70 980,390 220,390" fill="#dcfce7"/>
+  <polygon points="600,150 880,390 320,390" fill="#dbeafe"/>
+  <polygon points="600,235 780,390 420,390" fill="#fef3c7"/>
+  <polygon points="600,305 700,390 500,390" fill="#fee2e2"/>
+
+  <text x="600" y="130" text-anchor="middle" font-size="26" font-family="Arial" fill="#1f5a3e">Top tier: медіа, галузеві сайти, університети</text>
+  <text x="600" y="210" text-anchor="middle" font-size="24" font-family="Arial" fill="#1e3a6a">Mid tier: релевантні блоги та партнери</text>
+  <text x="600" y="285" text-anchor="middle" font-size="22" font-family="Arial" fill="#694c17">Support tier: каталоги, профілі, локальні цитати</text>
+  <text x="600" y="355" text-anchor="middle" font-size="20" font-family="Arial" fill="#7a2f2f">Low quality: масові спам-джерела</text>
+
+  <text x="600" y="485" text-anchor="middle" font-size="24" font-family="Arial" fill="#1f2937">Пріоритет: якість і релевантність &gt; кількість лінків</text>
+</svg>

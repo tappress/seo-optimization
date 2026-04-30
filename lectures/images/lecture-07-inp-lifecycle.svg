@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+  <rect x="80" y="150" width="230" height="170" rx="14" fill="#dbeafe" stroke="#5f86c6" stroke-width="3"/>
+  <text x="195" y="220" text-anchor="middle" font-size="28" font-family="Arial" fill="#1f3b65">Input</text>
+  <text x="195" y="260" text-anchor="middle" font-size="23" font-family="Arial" fill="#1f3b65">клік / tap</text>
+
+  <rect x="350" y="150" width="230" height="170" rx="14" fill="#fee2e2" stroke="#cd7676" stroke-width="3"/>
+  <text x="465" y="220" text-anchor="middle" font-size="28" font-family="Arial" fill="#7a2f2f">Processing</text>
+  <text x="465" y="260" text-anchor="middle" font-size="23" font-family="Arial" fill="#7a2f2f">JS tasks</text>
+
+  <rect x="620" y="150" width="230" height="170" rx="14" fill="#fef3c7" stroke="#bd9438" stroke-width="3"/>
+  <text x="735" y="220" text-anchor="middle" font-size="28" font-family="Arial" fill="#6b4f16">Presentation</text>
+  <text x="735" y="260" text-anchor="middle" font-size="23" font-family="Arial" fill="#6b4f16">layout + paint</text>
+
+  <rect x="890" y="150" width="230" height="170" rx="14" fill="#dcfce7" stroke="#5ea07f" stroke-width="3"/>
+  <text x="1005" y="220" text-anchor="middle" font-size="28" font-family="Arial" fill="#1e5a3d">Next Paint</text>
+  <text x="1005" y="260" text-anchor="middle" font-size="23" font-family="Arial" fill="#1e5a3d">візуальна реакція</text>
+
+  <line x1="310" y1="235" x2="350" y2="235" stroke="#5f86c6" stroke-width="5"/>
+  <line x1="580" y1="235" x2="620" y2="235" stroke="#cd7676" stroke-width="5"/>
+  <line x1="850" y1="235" x2="890" y2="235" stroke="#bd9438" stroke-width="5"/>
+
+  <text x="600" y="460" text-anchor="middle" font-size="30" font-family="Arial" fill="#273c66">INP = input delay + processing time + presentation delay</text>
+</svg>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- ПОГАНО: бренд попереду, ключове слово наприкінці -->
+    <title>Shop Ukraine | Електроніка | Купити ноутбук</title>
+
+    <!-- ДОБРЕ: ключове слово першим, бренд наприкінці -->
+    <title>Купити ноутбук в Україні - каталог 2024 | Shop</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<script>
+    <!-- React + Next.js: динамічний title (SEO Snippet) -->
+    import Head from 'next/head'
+
+    export default function ProductPage({product}) {
+        return (
+            <>
+                <Head>
+                    <title>{`${product.name} - купити в Україні | Shop`}</title>
+                    <meta
+                        name="description"
+                        content={`${product.name} від ${product.price} грн.
+                        Доставка 1–2 дні. ✓ Гарантія 2 роки. Офіційний магазин.`}
+                    />
+                </Head>
+                ...
+            </>
+        )
+    }
+</script>
+
+<script>
+    <!-- Vue + Nuxt.js: динамічний title (SEO Snippet) + Call API -->
+    const route = useRoute()
+
+    const {data: product} = await useFetch(`/api/products/${route.params.id}`)
+
+    useSeoMeta({
+        title: () =>
+            product.value
+                ? `${product.value.name} - купити в Україні | Shop`
+                : 'Товар',
+        description: () =>
+            product.value
+                ? `${product.value.name} від ${product.value.price} грн. Доставка 1–2 дні. ✓ Гарантія 2 роки.`
+                : '',
+    })
+</script>
+
+<script>
+    <!-- Vue + Nuxt.js: динамічний title (SEO Snippet) + props -->
+    const props = defineProps(['product'])
+
+    useSeoMeta({
+        title: () => `${props.product.name} - купити в Україні | Shop`,
+        description: () =>
+            `${props.product.name} від ${props.product.price} грн. Доставка 1–2 дні. ✓ Гарантія 2 роки. Офіційний магазин.`,
+    })
+</script>
+</body>
+</html>

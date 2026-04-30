@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Лекція 3. Семантичне ядро та структура сайту</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="styles/custom.css">
+</head>
+
+<body class="shower list">
+
+<header class="caption">
+    <h1>Лекція 3. Семантичне ядро та структура сайту</h1>
+    <p>
+        <a href="index.html">Назад до змісту</a>
+    </p>
+</header>
+
+<section class="slide">
+    <h2 class="shout">
+        Лекція 3. Семантичне ядро та структура сайту
+    </h2>
+</section>
+
+<section class="slide">
+    <h2>План лекції:</h2>
+    <ol>
+        <li>Типи пошукових запитів</li>
+        <li>Семантичне ядро та його роль</li>
+        <li>Кластеризація ключових слів</li>
+        <li>Silo-структура сайту</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Search Intent - фундамент SEO</h2>
+    <p><b>Search Intent (User Intent)</b> - намір, з яким користувач вводить запит у пошукову систему.</p>
+    <code class="mark">
+        Google's Mission: "Організувати світову інформацію та зробити її загальнодоступною та корисною"
+        <br>
+        RankBrain (2015) + BERT (2019) + MUM (2021): Google розуміє <b>НЕ слова</b>, а <b>НАМІР</b> користувача
+    </code>
+    <br>
+    <b>Статистика:</b>
+    <ul>
+        <li>15% щоденних запитів Google ніколи раніше не бачив</li>
+        <li>70% користувачів клікають на результати, що відповідають їхньому intent</li>
+        <li>Неправильний intent → bounce rate 80%+ → втрата позицій</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>4 типи Search Intent</h2>
+    <ul>
+        <li>Informational Intent (Інформаційний)</li>
+        <li>Navigational Intent (Навігаційний)</li>
+        <li>Commercial Investigation (Комерційне дослідження)</li>
+        <li>Transactional Intent (Транзакційний)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>SERP (Search Engine Results Page) характеристики</h2>
+    <div style="line-height: 24px; font-size: 19px;">
+        <p><b>SERP характеристики</b> - це особливості або елементи сторінки результатів пошуку в пошукових системах.
+        </p>
+        <p>Коли користувач вводить запит у пошукову систему, наприклад у Google Search, система показує не лише звичайні
+            посилання на сайти, а й різні додаткові блоки. Саме ці блоки і називають SERP features
+            (SERP-характеристики).</p>
+        <b>Найпоширеніші елементи SERP характеристик:</b>
+        <ul>
+            <li>Featured Snippet - блок із короткою відповіддю на запит (часто на самому верху сторінки)</li>
+            <li>Knowledge Panel - інформаційна панель про людину, компанію чи об’єкт</li>
+            <li>Local Pack - карта з місцевими компаніями</li>
+            <li>Image Pack - блок із зображеннями</li>
+            <li>Video results - результати відео (часто з YouTube)</li>
+            <li>People Also Ask - блок «Люди також запитують»</li>
+            <li>Top Stories - блок новин</li>
+            <li>Shopping results - товари з цінами</li>
+            <li>Site links - додаткові посилання всередині одного сайту</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>SERP feature example</h2>
+    <div class="columns two">
+        <img src="images/10.png" width="100%" alt="">
+        <img src="images/11.png" width="100%" alt="">
+    </div>
+</section>
+
+<section class="slide">
+    <h2>SERP (Search Engine Results Page) характеристики</h2>
+    Навіщо це важливо? У сфері SEO (Search Engine Optimization) оптимізація під SERP features допомагає:
+    <ul>
+        <li>отримати більшу видимість у пошуку</li>
+        <li>зайняти нульову позицію (position 0)</li>
+        <li>збільшити CTR (кількість кліків)</li>
+    </ul>
+    <b>SERP характеристики</b> - це спеціальні елементи на сторінці результатів пошуку, які доповнюють звичайні
+    посилання і показують користувачу швидку інформацію.
+</section>
+
+<section class="slide">
+    <h2>SERP (Search Engine Results Page) характеристики</h2>
+    <b>Найцінніші SERP features для трафіку:</b>
+    <ul>
+        <li>Featured Snippet</li>
+        <li>People Also Ask</li>
+        <li>Local Pack</li>
+        <li>Video results</li>
+        <li>Image Pack</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Informational Intent (Інформаційний)</h2>
+    <div class="columns two" style="line-height: 30px; font-size: 19px">
+        <div><p>Намір - дізнатися інформацію, навчитися, зрозуміти</p>
+            <b>Приклади запитів:</b>
+            <ul>
+                <li>як працює React hooks</li>
+                <li>що таке SEO</li>
+                <li>історія JavaScript</li>
+                <li>рецепт борщу</li>
+            </ul>
+            <b>Типові модифікатори:</b>
+            <ul>
+                <li>як, що, чому, коли, де, хто</li>
+                <li>гайд, інструкція, tutorial, приклад</li>
+                <li>порівняння, різниця між</li>
+            </ul>
+        </div>
+        <div>
+            <b>Google показує SERP характеристики:</b>
+            <ul>
+                <li>Featured Snippets (позиція 0)</li>
+                <li>People Also Ask</li>
+                <li>Статті (blogs, guides)</li>
+                <li>Відео з YouTube</li>
+                <li>Knowledge Graph (для фактів)</li>
+                <li>Ads: мінімум (low commercial value)</li>
+            </ul>
+            <a href="examples/lecture-03/informational-search.html" target="_blank">Приклад оптимізації (html code)</a>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Navigational Intent (Навігаційний)</h2>
+    <div class="columns two" style="line-height: 30px; font-size: 19px">
+        <div>
+            <p>Намір - знайти конкретний сайт або сторінку</p>
+            <b>Приклади запитів:</b>
+            <ul>
+                <li>facebook</li>
+                <li>youtube login</li>
+                <li>gmail вхід</li>
+                <li>rozetka відстежити замовлення</li>
+                <li>privatbank online</li>
+                <li>github react</li>
+            </ul>
+            <b>Типові модифікатори:</b>
+            <ul>
+                <li>найкращий, топ, огляд, відгуки</li>
+                <li>порівняння, vs, або</li>
+                <li>рекомендації, варто</li>
+            </ul>
+        </div>
+        <div>
+            <b>Google показує SERP характеристики:</b>
+            <ul>
+                <li>Офіційний сайт бренду (позиція 1)</li>
+                <li>Sitelinks (підсторінки)</li>
+                <li>Knowledge Panel (праворуч)</li>
+                <li>Пов'язані бренди</li>
+                <li>Ads - brand ads від конкурентів</li>
+            </ul>
+            <a href="examples/lecture-03/navigational-search.html" target="_blank">Приклад оптимізації (html code)</a>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Commercial Investigation (Комерційний)</h2>
+    <div class="columns two" style="line-height: 30px; font-size: 19px">
+        <div>
+            <p>Намір - вибір перед покупкою, порівняння варіантів</p>
+            <b>Приклади запитів:</b>
+            <ul>
+                <li>найкращий ноутбук для програміста</li>
+                <li>MacBook Pro vs Dell XPS</li>
+                <li>відгуки ASUS ROG Strix</li>
+                <li>топ-10 смартфонів 2026</li>
+                <li>порівняння React vs Vue</li>
+                <li>який фреймворк вибрати</li>
+            </ul>
+        </div>
+        <div>
+            <b>Google показує SERP характеристики:</b>
+            <ul>
+                <li>Огляди (reviews, listicles)</li>
+                <li>Порівняльні статті</li>
+                <li>Відео-огляди (YouTube)</li>
+                <li>E-commerce (позиції 7-10)</li>
+                <li>Ads - shopping ads, comparison ads</li>
+            </ul>
+            <a href="examples/lecture-03/commercial-search.html" target="_blank">Приклад оптимізації (html code)</a>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Transactional Intent (Транзакційний)</h2>
+    <div class="columns two" style="line-height: 30px; font-size: 19px">
+        <div>
+            <p>Намір - здійснити дію (купити, завантажити, замовити)</p>
+            <b>Приклади запитів:</b>
+            <ul>
+                <li>купити iPhone 15 Pro Чернівці</li>
+                <li>замовити піцу додому</li>
+                <li>скачати VS Code</li>
+                <li>забронювати готель Львів</li>
+                <li>придбати курс React</li>
+                <li>купити ноутбук онлайн</li>
+            </ul>
+            <b>Типові модифікатори:</b>
+            <ul>
+                <li>купити, замовити, придбати, онлайн</li>
+                <li>інтернет-магазин, ціна, вартість, знижка</li>
+                <li>доставка, безкоштовно</li>
+            </ul>
+        </div>
+        <div>
+            <b>Google показує SERP характеристики:</b>
+            <ul>
+                <li>E-commerce сайти (TOP-3)</li>
+                <li>Shopping Ads (зверху) - Ads dominated (60-70% SERP)</li>
+                <li>Google Shopping (праворуч)</li>
+                <li>Local Pack (для локальних запитів)</li>
+                <li>Price comparison sites</li>
+            </ul>
+            <a href="examples/lecture-03/transactional-search.html" target="_blank">Приклад оптимізації (html code)</a>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Змішаний Intent - як оптимізувати</h2>
+    <div class="columns two">
+        <div>
+            <p>Проблема - багато запитів мають кілька Search Intent одночасно</p>
+            <p>Пошук - iPhone 17 Pro</p>
+            <ul>
+                <li>Informational (25%): характеристики, огляди</li>
+                <li>Navigational (15%): офіційний сайт Apple</li>
+                <li>Commercial (35%): порівняння, відгуки</li>
+                <li>Transactional (25%): купити</li>
+            </ul>
+        </div>
+        <div>
+            <b>SERP показує:</b>
+            <ul>
+                <li>Apple.com (navigational)</li>
+                <li>Огляди (informational)</li>
+                <li>iPhone 16 Pro vs 14 Pro (commercial)</li>
+                <li>Rozetka, Foxtrot (transactional)</li>
+            </ul>
+            <a href="examples/lecture-03/mixed-search.html" target="_blank">Приклад оптимізації iphone page
+                (html code)</a>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Визначення Intent - практичні методи</h2>
+    <ul>
+        <li>Метод 1 - SERP Analysis (Google API) <a href="examples/lecture-03/serp-analysis.js"
+                                                    target="_blank">Приклад</a></li>
+        <li>Метод 2 - Keyword Modifiers<a href="examples/lecture-03/keyword-modifiers.js" target="_blank">Приклад</a>
+        </li>
+        <li>Метод 3 - Machine Learning Classification <a href="examples/lecture-03/intent-ML.py"
+                                                         target="_blank">Приклад</a></li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Семантичне ядро - визначення та структура</h2>
+    <p><b>Семантичне ядро (Semantic Core) </b>- упорядкований список всіх ключових слів, за якими планується просування
+        сайту в
+        пошукових системах.</p>
+    <div class="columns three" style="font-size: 16px;line-height: 30px">
+        <div>
+            <b>HIGH-FREQUENCY (ВЧ) - 10,000+ запитів/міс</b>
+            <ul>
+                <li>Високий обсяг трафіку</li>
+                <li>Висока конкуренція (KD 60-90)</li>
+                <li>Низька конверсія (1-2%)</li>
+                <li>Загальні запити</li>
+                <li>Приклад: "ноутбук", "смартфон"</li>
+            </ul>
+        </div>
+        <div>
+            <b>MID-FREQUENCY (СЧ) - 1,000-10,000 запитів/міс </b>
+            <ul>
+                <li>Помірний обсяг</li>
+                <li>Середня конкуренція (KD 30-60)</li>
+                <li>Середня конкуренція (KD 30-60)</li>
+                <li>Хороша конверсія (2-4%) │</li>
+                <li>Специфічніші запити</li>
+                <li>Приклад: "ігровий ноутбук", "ноутбук для студента"
+                </li>
+            </ul>
+        </div>
+        <div>
+            <b>LOW-FREQUENCY / LONG-TAIL (НЧ) - 10-1,000 запитів/міс </b>
+            <ul>
+                <li>Малий обсяг</li>
+                <li>Низька конкуренція (KD 5-30)</li>
+                <li> ВИСОКА конверсія (5-15%)</li>
+                <li>Дуже специфічні</li>
+                <li>Приклад: "купити ноутбук ASUS ROG, Strix G15 київ доставка"</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Семантичне ядро - визначення та структура</h2>
+    <p>Правило Парето (80/20) в SEO:</p>
+    <ul>
+        <li>20% ВЧ keywords → 80% impressions, 20% conversions</li>
+        <li>80% НЧ keywords → 20% impressions, 80% conversions</li>
+    </ul>
+    <b>Фокус на Long-Tail для конверсій!</b>
+</section>
+
+<section class="slide">
+    <h2>Збір семантичного ядра</h2>
+    <p>Крок 1: Seed Keywords (базові запити)</p>
+    <b>Для e-commerce tech store:</b>
+    <div class="columns two" style="font-size: 16px;line-height: 24px">
+        <div>
+            <b>Продукти:</b>
+            <ul>
+                <li>ноутбук, laptop</li>
+                <li>комп'ютер, PC</li>
+                <li>монітор, екран</li>
+                <li>периферія (мишка, клавіатура)</li>
+            </ul>
+            <b>Категорії:</b>
+            <ul>
+                <li>ігровий</li>
+                <li>для роботи</li>
+                <li>для студентів</li>
+                <li>бюджетні</li>
+            </ul>
+        </div>
+        <div>
+            <b>Бренди:</b>
+            <ul>
+                <li>ASUS, Dell, HP</li>
+                <li>Lenovo, Acer</li>
+                <li>Apple (MacBook)</li>
+            </ul>
+            <b>Дії:</b>
+            <ul>
+                <li>купити, замовити</li>
+                <li>порівняти, вибрати</li>
+                <li>відгуки, огляд</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Збір семантичного ядра</h2>
+    <b>Seed list (10-20 keywords):</b>
+    <ul style="font-size: 16px">
+        <li>ноутбук</li>
+        <li>ігровий ноутбук</li>
+        <li>купити ноутбук</li>
+        <li>ноутбук ASUS</li>
+        <li>MacBook</li>
+        <li>комп'ютер</li>
+        <li>монітор</li>
+        <li>клавіатура</li>
+        <li>мишка геймерська</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Семантичне ядро - визначення та структура</h2>
+    <h2>Крок 2: Expansion через Google Tools</h2>
+    <ol>
+        <li>Google Autocomplete</li>
+        <li>People Also Ask (PAA)</li>
+        <li>Related Searches (Пов'язані запити)</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2>Семантичне ядро - визначення та структура</h2>
+    <b>Крок 3: Keyword Planner та професійні tools</b>
+    <p>Існує інструмент Google Keyword Planner у системі Google Ads для пошуку та аналізу ключових слів для SEO або
+        реклами.</p>
+    <p>Дозволяє отримати seed keywords</p>
+    <ul>
+        <li>Avg. monthly searches</li>
+        <li>Competition (Low/Medium/High)</li>
+        <li>Top of page bid (CPC)</li>
+        <li>Related keywords (сотні варіацій)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Семантичне ядро - визначення та структура</h2>
+    <b>Крок 4: Competitor Analysis</b>
+    <ul>
+        <li>Знаходимо keywords конкурентів, яких у нас немає</li>
+        <li>Сортуємо за potential traffic</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Метрики аналізу keyword</h2>
+    <ul>
+        <li>Search Volume (<a href="https://trends.google.com/trends/" target="_blank">Google Trends</a>)</li>
+        <li>Keyword Difficulty (KD)</li>
+        <li>Cost Per Click (CPC) - вартість кліка в Google Ads</li>
+        <Li>Traffic Potential (Реалістична оцінка трафіку при досягненні TOP-1)</Li>
+        <li>Keyword Priority Score</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Кластеризація - розв'язання проблеми канібалізації</h2>
+    <b>Проблема - Keyword Cannibalization. <br>Створено 8 окремих сторінок:</b>
+    <ul>
+        <li>/noutbuk-dlia-studenta</li>
+        <li>/kupyty-noutbuk-student</li>
+        <li>/student-laptop</li>
+        <li>/noutbuk-navchannia</li>
+        <li>/laptop-student-kyiv</li>
+        <li> /noutbuk-student-tsina</li>
+        <li>/student-laptop-budget</li>
+        <li>/best-laptop-studen</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Кластеризація - розв'язання проблеми канібалізації</h2>
+    <b>Всі оптимізовані під схожі запити! <br> Наслідки:</b>
+    <ul>
+        <li>Google не розуміє, яку сторінку показувати</li>
+        <li>Сторінки конкурують між собою</li>
+        <li>PageRank розпорошується на 8 сторінок</li>
+        <li>Bounce rate високий (users confused)</li>
+        <li>Результат: ЖОДНА сторінка не в TOP-10</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Кластеризація - розв'язання проблеми канібалізації</h2>
+    <b>З кластеризацією - кластер "Ноутбуки для студентів" (15 keywords):</b>
+    <div class="columns two">
+        <ul>
+            <li>ноутбук для студента (800 запитів/міс)</li>
+            <li>купити ноутбук студент (400)</li>
+            <li>ноутбук для навчання (600)</li>
+            <li>laptop для студента (200)</li>
+            <li>бюджетний ноутбук студент (300)</li>
+            <li>найкращий ноутбук студент (250)</li>
+            <li>ноутбук студент ціна (180))</li>
+        </ul>
+        <ul>
+            <li>ноутбук для університету (150)</li>
+            <li>студентський ноутбук (120)</li>
+            <li>laptop навчання (100)</li>
+            <li>недорогий ноутбук студент (90)</li>
+            <li>ноутбук студент київ (80)</li>
+            <li>student laptop ukraine (60</li>
+            <li>ноутбук конспекти (50)</li>
+            <li>портативний ноутбук навчання (40)</li>
+        </ul>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Кластеризація - розв'язання проблеми канібалізації</h2>
+    <p>ОДНА сторінка: /noutbuky-dlia-studentiv</p>
+    <b>Очікуваний результат:</b>
+    <ul>
+        <li>Всі keywords на одній сторінці</li>
+        <li>PageRank концентрується</li>
+        <li>Google чітко розуміє тему</li>
+        <li>Користувачі знаходять що потрібно</li>
+        <li>TOP-5 по всіх 15 keywords кластеру</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Методи кластеризації</h2>
+    <ul>
+        <li>Метод 1: SERP-Based Clustering (найточніший) - keywords в одному кластері, якщо Google показує схожі
+            результати (60%+ overlap)
+        </li>
+        <li>Метод 2: Intent-Based Clustering</li>
+        <li>Метод 3: Semantic Clustering (ML-based)</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Silo-структура сайту</h2>
+    <p>Silo Architecture - організація контенту в ізольовані тематичні блоки для максимальної релевантності.</p>
+    <div class="columns two">
+        <div><b>Традиційна структура (проблемна) - на прикладі головної сторінки сайту:</b>
+            <ul>
+                <li>Товар 1 ↔ Товар 2 ↔ Товар 3</li>
+                <li>Стаття 1 ↔ Стаття 2</li>
+                <li>Категорія A ↔ Категорія B</li>
+                <li>(хаотичні посилання між різними темами)</li>
+            </ul>
+        </div>
+        <div>
+            <b>Проблеми:</b>
+            <ul>
+                <li>Google не розуміє, яка тема домінує</li>
+                <li>PageRank розпорошується</li>
+                <li>Weak topical authority</li>
+                <li>Keyword cannibalization</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Silo-структура сайту</h2>
+    <ul style="font-size: 10px; line-height: 18px;">
+        <li>Головна
+            <ul>
+                <li>SILO 1: Ігрові ноутбуки
+                    <ul>
+                        <li>Hub: /gaming-laptops/</li>
+                        <li>Category: /gaming-laptops/budget/</li>
+                        <li>Category: /gaming-laptops/premium/</li>
+                        <li>Product: /gaming-laptops/asus-rog/</li>
+                        <li>Product: /gaming-laptops/msi-raider/</li>
+                        <li>Guide: /gaming-laptops/buying-guide/
+                            <ul>
+                                <li>links only within SILO 1</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>SILO 2: Бізнес-ноутбуки
+                    <ul>
+                        <li>Hub: /business-laptops/</li>
+                        <li>Category: /business-laptops/ultrabooks/</li>
+                        <li>Product: /business-laptops/dell-xps/</li>
+                        <li>Guide: /business-laptops/for-office/
+                            <ul>
+                                <li>links only within SILO 2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>SILO 3: Студентські ноутбуки
+                    <ul>
+                        <li>Hub: /student-laptops/</li>
+                        <li>Category: /student-laptops/budget/</li>
+                        <li>Product: /student-laptops/acer-aspire/</li>
+                        <li>Guide: /student-laptops/what-to-choose/
+                            <ul>
+                                <li>links only within SILO 3</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Silo-структура сайту</h2>
+    <b>Правила:</b>
+    <ul>
+        <li>Перелінковка ТІЛЬКИ всередині силосу</li>
+        <li>Між силосами ТІЛЬКИ через головну</li>
+        <li>Кожен силос = кластер keywords</li>
+        <li>Чітка тематична релевантність</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Типи Silo-структур</h2>
+    <b>Physical Silo (Фізична) - через URL структуру (URL hierarchy reflects silo structure)</b>
+    <div class="columns two">
+        <ul style="line-height: 30px;">
+            <li>/gaming-laptops/ ← SILO 1
+                <ul>
+                    <li>/gaming-laptops/ (hub)</li>
+                    <li>/gaming-laptops/budget/</li>
+                    <li>/gaming-laptops/premium/</li>
+                    <li>/gaming-laptops/asus-rog/</li>
+                    <li>/gaming-laptops/guides/buying/</li>
+                </ul>
+            </li>
+            <li>/business-laptops/ ← SILO 2
+                <ul>
+                    <li>/business-laptops/ (hub)</li>
+                    <li>/business-laptops/ultrabooks/</li>
+                    <li>/business-laptops/dell-xps/</li>
+                </ul>
+            </li>
+        </ul>
+        <div>
+            <b>Переваги:</b>
+            <ul>
+                <li>Чіткість для користувачів</li>
+                <li>Google легко розпізнає структуру</li>
+                <li>Breadcrumbs природні</li>
+                <li>URL = site hierarchy</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Типи Silo-структур</h2>
+    <b>Virtual Silo (Віртуальна) - через internal linking</b>
+    <ul>
+        <li>https://techstore.ua/
+            <ul>
+                <li>/gaming-laptops (hub, links to all gaming pages)</li>
+                <li>/asus-rog (links ONLY to gaming hub + related gaming)</li>
+                <li>/msi-raider (links ONLY to gaming hub + related gaming)</li>
+                <li>/gaming-buying-guide (links ONLY to gaming pages)</li>
+
+                <li>/business-laptops (hub, separate silo)</li>
+                <li>/dell-xps (links ONLY to business hub)</li>
+
+                <li>NO links between /asus-rog ↔ /dell-xps</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Типи Silo-структур</h2>
+    <b>Hybrid Silo (Гібридна) - комбінація physical для основи + virtual для flexibility</b>
+    <ul style="font-size: 18px;line-height: 24px;">
+        <li>https://techstore.ua/
+            <ul>
+                <li>/gaming-laptops/ (physical silo)
+                    <ul>
+                        <li>/gaming-laptops/asus-rog/</li>
+                        <li>/gaming-laptops/msi-raider/</li>
+                    </ul>
+                </li>
+                <li>/guides/ (shared content pool)
+                    <ul>
+                        <li>/guides/gaming-laptop-buying-guide/
+                            <ul>
+                                <li>Virtual links: посилається на /gaming-laptops/ + products</li>
+                            </ul>
+                        </li>
+                        <li>/guides/business-laptop-guide/
+                            <ul>
+                                <li>Virtual links: посилається на /business-laptops/</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>/blog/ (flexible content)
+                    <ul>
+                        <li>/blog/best-laptops-2025/
+                            <ul>
+                                <li>Може посилатись на різні silos contextually</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+    <p class="mark">Рекомендація для більшості проєктів - hybrid підхід дає найкращий баланс структури та гнучкості.</p>
+</section>
+
+<section class="slide">
+    <h2>Internal Linking Strategy для Silo</h2>
+    <b>Правила перелінковки:</b>
+    <ol>
+        <li>Hub → All Supporting Pages (Downstream Links)
+            Hub має посилання на всі сторінки в силосі
+        </li>
+        <li>Supporting → Hub (Upstream Links)
+            Кожна сторінка посилається назад на hub
+        </li>
+        <li>Supporting ↔ Related Supporting (Lateral Links)
+            Між related сторінками того ж силосу
+        </li>
+        <li>NO Cross-Silo Links
+            Між силосами ТІЛЬКИ через головну або footer
+        </li>
+        <li>Anchor Text: природний, varied, keyword-rich</li>
+    </ol>
+</section>
+
+<section class="slide">
+    <h2 class="shout">Дякую за увагу!</h2>
+</section>
+
+<footer class="badge">
+    <a href="https://github.com/Computer-Science-Department-ChNU/seo-optimization">Fork me on GitHub</a>
+</footer>
+
+<div class="progress"></div>
+
+<script src="node_modules/@shower/core/dist/index.js"></script>
+</body>
+</html>

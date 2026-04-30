@@ -1,0 +1,16 @@
+#    _______           _             _              _   _____  ______  ____                          
+#   |__   __|         | |           (_)            | | / ____||  ____|/ __ \                         
+#      | |  ___   ___ | |__   _ __   _   ___  __ _ | || (___  | |__  | |  | |   ___  ___   _ __ ___  
+#      | | / _ \ / __|| '_ \ | '_ \ | | / __|/ _` || | \___ \ |  __| | |  | |  / __|/ _ \ | '_ ` _ \ 
+#      | ||  __/| (__ | | | || | | || || (__| (_| || | ____) || |____| |__| |_| (__| (_) || | | | | |
+#      |_| \___| \___||_| |_||_| |_||_| \___|\__,_||_||_____/ |______|\____/(_)\___|\___/ |_| |_| |_|
+#
+
+# All Robots
+User-agent: *
+Disallow:
+
+# Sitemap Files
+Sitemap: https://technicalseo.com/sitemap.xml
+Sitemap: https://technicalseo.com/old-sitemap.xml
+Sitemap: https://technicalseo.com/insights/sitemap_index.xml

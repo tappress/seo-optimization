@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620">
+  <rect x="0" y="0" width="1200" height="620" fill="#f8fafc"/>
+
+  <rect x="120" y="80" width="980" height="480" fill="#ffffff" stroke="#475569" stroke-width="4"/>
+  <line x1="610" y1="80" x2="610" y2="560" stroke="#475569" stroke-width="3"/>
+  <line x1="120" y1="320" x2="1100" y2="320" stroke="#475569" stroke-width="3"/>
+
+  <rect x="130" y="90" width="470" height="220" fill="#fee2e2"/>
+  <rect x="620" y="90" width="470" height="220" fill="#dcfce7"/>
+  <rect x="130" y="330" width="470" height="220" fill="#fef3c7"/>
+  <rect x="620" y="330" width="470" height="220" fill="#dbeafe"/>
+
+  <text x="365" y="130" text-anchor="middle" font-family="Arial" font-size="28" fill="#7f1d1d">Високий вплив / Висока складність</text>
+  <text x="855" y="130" text-anchor="middle" font-family="Arial" font-size="28" fill="#14532d">Високий вплив / Низька складність</text>
+  <text x="365" y="370" text-anchor="middle" font-family="Arial" font-size="28" fill="#92400e">Низький вплив / Висока складність</text>
+  <text x="855" y="370" text-anchor="middle" font-family="Arial" font-size="28" fill="#1e3a8a">Низький вплив / Низька складність</text>
+
+  <text x="170" y="195" font-family="Arial" font-size="24" fill="#7f1d1d">• міграція структури URL</text>
+  <text x="170" y="235" font-family="Arial" font-size="24" fill="#7f1d1d">• redesign шаблонів категорій</text>
+
+  <text x="660" y="195" font-family="Arial" font-size="24" fill="#14532d">• оптимізація title/description</text>
+  <text x="660" y="235" font-family="Arial" font-size="24" fill="#14532d">• виправлення canonical дублів</text>
+  <text x="660" y="275" font-family="Arial" font-size="24" fill="#14532d">• внутрішня перелінковка кластерів</text>
+
+  <text x="170" y="435" font-family="Arial" font-size="24" fill="#92400e">• масова заміна іконок у блозі</text>
+  <text x="170" y="475" font-family="Arial" font-size="24" fill="#92400e">• дрібні стилістичні правки footer</text>
+
+  <text x="660" y="435" font-family="Arial" font-size="24" fill="#1e3a8a">• cleanup noindex тегів</text>
+  <text x="660" y="475" font-family="Arial" font-size="24" fill="#1e3a8a">• оновлення sitemap.xml</text>
+
+  <text x="610" y="605" text-anchor="middle" font-family="Arial" font-size="26" fill="#0f172a">Складність / Effort</text>
+  <text x="40" y="330" transform="rotate(-90 40 330)" text-anchor="middle" font-family="Arial" font-size="26" fill="#0f172a">Очікуваний вплив</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500">
+
+  <rect x="110" y="30" width="270" height="460" rx="26" fill="#ffffff" stroke="#aab8cc" stroke-width="4"/>
+  <rect x="145" y="90" width="200" height="24" fill="#dbeafe"/>
+  <rect x="145" y="130" width="200" height="24" fill="#dbeafe"/>
+  <rect x="145" y="170" width="170" height="24" fill="#dbeafe"/>
+  <rect x="145" y="220" width="200" height="100" fill="#fef3c7"/>
+  <text x="245" y="360" text-anchor="middle" font-size="22" font-family="Arial" fill="#273c66">Mobile HTML</text>
+
+  <rect x="460" y="60" width="640" height="400" rx="16" fill="#ffffff" stroke="#aab8cc" stroke-width="4"/>
+  <text x="520" y="120" font-size="28" font-family="Arial" fill="#273c66">1. Контент-паритет desktop/mobile</text>
+  <text x="520" y="170" font-size="28" font-family="Arial" fill="#273c66">2. Однакові meta robots/canonical</text>
+  <text x="520" y="220" font-size="28" font-family="Arial" fill="#273c66">3. Structured data без розбіжностей</text>
+  <text x="520" y="270" font-size="28" font-family="Arial" fill="#273c66">4. Доступні внутрішні посилання</text>
+  <text x="520" y="320" font-size="28" font-family="Arial" fill="#273c66">5. Швидкість і UX на мобільних</text>
+
+  <line x1="380" y1="260" x2="460" y2="260" stroke="#5e87c6" stroke-width="5"/>
+  <polygon points="460,260 444,250 444,270" fill="#5e87c6"/>
+</svg>

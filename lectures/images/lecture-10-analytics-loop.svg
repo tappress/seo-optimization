@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620">
+  <rect x="0" y="0" width="1200" height="620" fill="#f8fafc"/>
+
+  <defs>
+    <marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L12,6 L0,12 z" fill="#334155"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="70" width="220" height="140" rx="20" fill="#dbeafe" stroke="#2563eb" stroke-width="4"/>
+  <text x="150" y="130" text-anchor="middle" font-family="Arial" font-size="30" fill="#1e3a8a">Збір</text>
+  <text x="150" y="170" text-anchor="middle" font-family="Arial" font-size="30" fill="#1e3a8a">даних</text>
+
+  <rect x="320" y="70" width="220" height="140" rx="20" fill="#dcfce7" stroke="#16a34a" stroke-width="4"/>
+  <text x="430" y="130" text-anchor="middle" font-family="Arial" font-size="30" fill="#14532d">Аналіз</text>
+  <text x="430" y="170" text-anchor="middle" font-family="Arial" font-size="30" fill="#14532d">сигналів</text>
+
+  <rect x="600" y="70" width="220" height="140" rx="20" fill="#fef3c7" stroke="#d97706" stroke-width="4"/>
+  <text x="710" y="130" text-anchor="middle" font-family="Arial" font-size="30" fill="#92400e">Гіпотези</text>
+  <text x="710" y="170" text-anchor="middle" font-family="Arial" font-size="30" fill="#92400e">та план</text>
+
+  <rect x="880" y="70" width="280" height="140" rx="20" fill="#fee2e2" stroke="#dc2626" stroke-width="4"/>
+  <text x="1020" y="130" text-anchor="middle" font-family="Arial" font-size="30" fill="#7f1d1d">Впровадження</text>
+  <text x="1020" y="170" text-anchor="middle" font-family="Arial" font-size="30" fill="#7f1d1d">правок</text>
+
+  <rect x="280" y="350" width="640" height="200" rx="24" fill="#ffffff" stroke="#64748b" stroke-width="4"/>
+  <text x="600" y="410" text-anchor="middle" font-family="Arial" font-size="36" fill="#0f172a">Валідація результату</text>
+  <text x="600" y="460" text-anchor="middle" font-family="Arial" font-size="28" fill="#334155">CTR, позиції, engaged sessions, CR</text>
+  <text x="600" y="505" text-anchor="middle" font-family="Arial" font-size="28" fill="#334155">оновлення KPI та наступний цикл</text>
+
+  <line x1="260" y1="140" x2="320" y2="140" stroke="#334155" stroke-width="6" marker-end="url(#arr)"/>
+  <line x1="540" y1="140" x2="600" y2="140" stroke="#334155" stroke-width="6" marker-end="url(#arr)"/>
+  <line x1="820" y1="140" x2="880" y2="140" stroke="#334155" stroke-width="6" marker-end="url(#arr)"/>
+  <line x1="1020" y1="210" x2="920" y2="350" stroke="#334155" stroke-width="6" marker-end="url(#arr)"/>
+  <line x1="280" y1="350" x2="170" y2="210" stroke="#334155" stroke-width="6" marker-end="url(#arr)"/>
+</svg>
